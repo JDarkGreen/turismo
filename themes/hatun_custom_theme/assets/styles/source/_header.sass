@@ -1,0 +1,196 @@
+/*----------------------------------------------------------------------------------*/
+/*--------------------- ARCHIVO HEADER  DE PÁGINA ----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+
+//---------------------------*
+// HEADER MAIN
+//---------------------------*
+
+#mainHeader
+	background: white
+	padding   : 12px 0
+
+	/* Títulos Internos */
+	h2.title 
+		color         : #232323
+		font-family   : "GothamBold"
+		font-size     : 14px
+		font-weight   : bold
+		line-height   : 14px
+		opacity       : .9
+		padding-top   : 3px
+
+	/* Ícon view */
+	a.link-not-decoration
+		text-decoration: none !important
+
+
+//MainLogo
+#mainLogo
+	margin : 0
+	+transition( all 5s ease )
+	//hover 
+	&:hover 
+		+opacity( .8 )
+		+rotateY( 360deg )
+
+/*
+ * Menú de Branding
+ */
+ul#branding
+	list-style-type: none 
+	margin         : 0
+	padding        : 0
+	//Item branding
+	li.item-branding
+		border-left: 1px solid rgba(0,0,0,.2)
+		display    : inline-block
+		height     : 80px 
+		padding    : 0 25px
+		//Primer elemento 
+		&:first-child 
+			border-left: none
+
+		//Variaciones de Padding en listas
+		&#meteo_main
+			padding: 0 50px 0 0
+
+		//Idioma
+		&#idioma_main
+			padding: 0 20px
+
+		//Logo
+		&#logo_main
+			padding: 0 90px
+
+	//Sublistas
+	ul 
+		list-style-type: none 
+
+//Icon Meteorológico
+#meteo_main_icon
+	background-image   : url("../../images/wheater/dia.png") 
+	background-position: 0 100%
+	background-repeat  : no-repeat
+	display            : inline-block
+	height             : 69px
+	padding            : 5px 15px 0 0
+	vertical-align     : top 
+	width              : 79px
+//Detalles Meteorológicos
+#meteo_main_detalhes
+	display: inline-block
+	padding: 10px 3px 10px 0
+
+	//Localidad
+	.meteo_main_localidade
+		font-family: "GothamBold"
+		font-size  : 14px 
+	//Fecha
+	.meteo_main_date
+		color      : #828282
+		font-family: "GothamBook"
+		font-size  : 13px
+		i
+			color      : #232323
+			margin-left: 5px
+	//Tiempo
+	.meteo_main_temp
+		font-family: 'GothamMedium'		
+		font-size  : 36px
+		font-weight: normal
+		line-height: 1em
+
+//Menu de Lenguaje
+#language_menu
+	clear     : both
+	float     : left
+	list-style: none
+	margin    : 4px 0 0 0
+	padding   : 0
+	position  : relative
+	li 
+		padding-bottom: 2px
+		position      : relative
+		a#idioma_title
+			border         : 1px solid #FFF
+			color          : #222
+			display        : block
+			font-size      : 14px
+			font-weight    : bold
+			line-height    : 17px
+			margin         : 0px
+			padding        : 10px 0
+			text-decoration: none
+
+			span.idioma_title_lang
+				color      : #979797
+				display    : block 
+				font-family: Arial
+				font-size  : 12px
+				font-weight: normal
+				line-height: 20px
+
+		//Submenu
+		ul 
+			float     : left
+			list-style: none
+			margin    : 0
+			padding   : 0px
+			width     : 100%
+			li 
+				a 
+					border-bottom  : 1px solid #e6e6e6			
+					color          : #949494
+					display        : block
+					font-size      : 13px
+					padding        : 2px
+					text-align     : center
+					text-decoration: none
+					+transition( all 500ms ease )
+					//Hover
+					&:hover
+						background: #eaeaea
+						box-shadow: inset 1px 4px 9px -6px
+ 
+	//Hover Menu 
+	&:hover 
+		.idioma_subitems 
+			display: block 
+			z-index: 50000
+			height : 200px
+
+	//Submenu Contenedor
+	.idioma_subitems
+		+border-radius( 0 0 3px 3px )
+		+box-shadow( 0px 0px 10px 3px rgba(100,100,100,0.1) )
+		+transition( all 600ms ease )
+		background-color: #FFF
+		border          : 1px solid #bcbcbc
+		font-family     : Arial
+		height          : 0
+		left            : -50% 
+		overflow        : hidden
+		position        : absolute
+		top             : 110%
+		width           : 130px
+		z-index         : -1
+
+//Contacto
+.whatsaap 
+	color      : #4E5C2A
+	font-family: "GothamMedium"
+	//Icon
+	i#icon-whatsapp
+		background    : url('../../images/icons/whatsapp.png') no-repeat
+		display       : inline-block
+		height        : 34px
+		vertical-align: middle 
+		width         : 34px
+
+//---------------------------*
+// MAIN NAVIGATION
+//---------------------------*
+
+

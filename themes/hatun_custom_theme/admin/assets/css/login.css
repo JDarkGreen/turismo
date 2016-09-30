@@ -1,0 +1,79 @@
+/**
+** Estilos Para el login de wordpress.
+ */
+
+/*
+ * Importar Fuentes
+ */
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+
+/**
+ * Keyframes
+ */
+
+@keyframes slide
+{
+	0%{
+    	transform: translate3d(0, 0, 0);
+  	}
+  	100%{
+    	transform: translate3d( -1440px , 0 , 0);
+  	}
+}
+
+body.login{ overflow: hidden; }
+
+body.login:after
+{
+	animation : slide 120s linear infinite;
+	background: url('../img/bg-admin-slider.jpg') repeat-x;
+	bottom    : 0;
+	content   : "";
+	left      : 0;
+	position  : absolute;
+	right     : 0;
+	top       : 0;
+	width     : 5000px;
+	z-index   : -1;
+}
+
+
+/**
+ * LOGIN 
+ */
+.login h1 a
+{
+	background: url('../img/logo.jpg') no-repeat;
+	height    : 80px;
+	width     : 150px;
+}
+
+#login p.message
+{
+	background     : url('../img/bg-admin-login.jpg') no-repeat;
+	background-size: cover;
+}
+
+#login #nav a, #login #backtoblog a
+{
+	color      : black;
+	font-family: 'Ubuntu', sans-serif;	
+	font-size  : 17px;
+}
+
+/*
+ * Formulary
+ */
+#loginform
+{
+	-webkit-background-size: cover;
+	background             : url('../img/bg-admin-login.jpg') no-repeat;
+	background-size        : cover;
+	color                  : black;
+	font-family            : 'Ubuntu', sans-serif;
+}
+
+#loginform label{ color: black; font-weight: 600; }
+
+

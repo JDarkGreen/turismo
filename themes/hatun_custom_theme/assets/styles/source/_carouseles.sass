@@ -1,0 +1,172 @@
+/** ARCHIVO DONDE SE ENCUENTRAN LOS CAROUSELES DEL TEMA **/
+
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SLIDER HOME   -----------------------------------------------------**/
+/***************************************************************************************/
+
+#carousel-home
+
+	/*
+	 * Contenedor de Texto Slider
+	 */
+	.contentTextSlider
+		color : white
+		//Título
+		h2 
+			font-size : 45px
+		//Link
+		a#btn-slider-home
+			font-size  : 19px
+			font-weight: 600
+			padding    : 9px 18px
+
+	/*
+	 * Arrows
+	 */
+	.tparrows
+		background: none !important
+		&:before
+			font-size : 45px
+
+	/*
+	 * Thumbnails 
+	 */
+	.tp-bullet 
+		+border-radius( 50% )
+		+transition( all .3s ease )
+		-webkit-box-sizing: content-box
+		background-color  : rgba(0, 0, 0, 0)
+		border            : 2px solid rgb(255, 255, 255)
+		box-sizing        : content-box
+		height            : 10px
+		width             : 10px
+
+		//After
+		&:after 
+			+border-radius( 50% )
+			+scale( 0 )
+			+transition( all .3s ease )
+			background-color: rgb(255, 255, 255)
+			content         : ""
+			height          : 100%
+			left            : 0
+			position        : absolute
+			transform-origin: 50% 50%
+			width           : 100%
+
+		//Selectec and hover
+		&.selected , &:hover
+			background: white
+
+		//Only Hover
+		&:hover 
+
+			.tp-bullet-image, .tp-bullet-imageoverlay
+				+transform( translateY(0px) translateX(-50%) )
+				+opacity( 1 )
+				visibility: visible
+
+			//Title
+			.tp-bullet-title
+				+opacity( 1 )
+				+transform( translateY(0px) translateX(-50%) )
+				visibility: visible
+
+			//After
+			&:after
+				+scale( 1.2 )
+
+	//Image and Overlay
+	.tp-bullet-image, .tp-bullet-imageoverlay
+		+border-radius( 4px )
+		+transform( translateX(-50%) )
+		+transition( all .3s ease )
+		background         : rgba(0,0,0,0.5)
+		background-position: center center
+		background-size    : cover
+		border             : 3px solid white
+		bottom             : 13px
+		box-sizing         : content-box
+		height             : 60px
+		margin-bottom      : 10px
+		opacity            : 0
+		position           : absolute
+		transform-origin   : 50% 50%
+		visibility         : hidden
+		width              : 135px
+
+	//Title
+	.tp-bullet-title
+		+opacity( 0 )
+		+transition( all 0.3s ease )
+		+transition( all 0.3s ease )
+		bottom          : 45px
+		color           : rgb(255, 255, 255)
+		font-size       : 13px
+		font-weight     : 600
+		line-height     : 15px
+		position        : absolute
+		text-align      : center
+		transform-origin: 50% 50%
+		vertical-align  : middle
+		visibility      : hidden
+		width           : 135px
+		z-index         : 3
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SERVICIOS HOME  ---------------------------------------------------**/
+/***************************************************************************************/
+
+#carousel-services
+	//Item preview
+	.itemPreviewService
+		//Titulo
+		h2 
+			color    : white 
+			font-size: 13.5px 
+			margin   : 0 
+			padding  : 10px 0 
+		//Figure
+		figure 
+			background-size: cover
+			height         : 120px 
+			width          : 100%
+			margin         : 0 auto 14px 
+		//Extracto
+		.content-excerpt
+			font-size : 13.5px
+
+//Flechas de Carousel
+.arrowCarousel__services 
+	color          : #0074C3
+	font-size      : 35px 
+	text-decoration: none !important
+	display        : inline-block
+	margin         : 0 3px 
+	//focus 
+	&:focus 
+		text-decoration: none !important
+	//hover
+	&:hover 
+		+animation( pulse 1s ease-in-out infinite )
+
+/***************************************************************************************/
+/**-- 1.1 CAROUSEL SERVICIOS SINGLE  ---------------------------------------------------**/
+/***************************************************************************************/
+
+#carousel-single-service
+	//Item 
+	figure.imageGalleryService
+		background-size: cover 
+		height         : 230px 
+
+//Contenedor de Flechas
+.containerCarousel__services
+	background: #0073C3
+	a 
+		color          : white 
+		display        : inline-block
+		font-size      : 25px 
+		margin         : 0 4px 
+		text-decoration: none !important
