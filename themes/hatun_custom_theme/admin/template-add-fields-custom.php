@@ -5,6 +5,10 @@
 *------------------------------*/
 include('template-fields/social-fields.php');
 
+/*------------------------------*
+* SECCION PÁGINA HOME
+*------------------------------*/
+include('template-fields/home-fields.php');
 
 /*------------------------------*
 * SECCION EMPRESA

@@ -1,0 +1,43 @@
+
+/**************************************************************************/
+/**-- MENU NAVEGACIÓN PRINCIPAL -----------------------------------------**/
+/**************************************************************************/
+
+/* Main Menu */
+
+#mainNavigation
+	background : #008A00
+	font-family: "GothamMedium" , sans-serif
+	margin     : 0 auto 4px
+	ul
+		list-style-type: none  
+		margin         : 0
+		padding        : 0 
+		//Main Menu
+		&.main-menu
+			display        : flex 
+			flex-wrap      : wrap 
+			justify-content: space-between 
+			li 
+				display: inline-block 
+				padding: 18px
+				+transition( all 700ms ease-in-out )
+				/* Hover and active */
+				&:hover , &.active 
+					background: #FF9B00
+				
+				/* Home */
+				&.home 
+					padding: 10px 34px 
+					a 
+						font-size: 30px
+
+				/* Link */
+				a 
+					color          : white
+					display        : block 
+					line-height    : 1em 
+					text-decoration: none !important
+					text-transform : uppercase 
+
+

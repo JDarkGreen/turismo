@@ -12,7 +12,6 @@ var j = jQuery.noConflict();
 	*/
 	j(document).on("ready",function(){
 
-
 		/**
 		* Utilizar ajax para actualizar las opciones del tema
 		*/
@@ -37,8 +36,14 @@ var j = jQuery.noConflict();
 				options[index] = { [current_name] : current_val };
 			});
 
+			/**
+			  * Variable del directorio template
+			  * objectVariable.templateDir
+			  */
+
+
 			//Enviar por ajax este objeto
-			j.post( '../wp-content/themes/aqua_custom_theme/admin/update-options-ajax.php' , {
+			j.post( objectVariable.templateDir + '/admin/update-options-ajax.php' , {
 
 				options_theme : options
 

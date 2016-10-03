@@ -30,29 +30,29 @@ function create_post_type(){
 		'menu_icon'   => 'dashicons-nametag',
 	);
 
-	/*|-----SERVICIOS ----------------------|*/
+	/*|-----TOURS ----------------------|*/
 	
-	$labels_services = array(
-		'name'               => __('Servicios'),
-		'singular_name'      => __('Servicio'),
-		'add_new'            => __('Nuevo Servicio'),
-		'add_new_item'       => __('Agregar nuevo Servicio'),
-		'edit_item'          => __('Editar Servicio'),
-		'view_item'          => __('Ver Servicio'),
-		'search_items'       => __('Buscar Servicios'),
-		'not_found'          => __('Servicio no encontrado'),
-		'not_found_in_trash' => __('Servicio no encontrado en la papelera'),
+	$labels_tours = array(
+		'name'               => __('Tours'),
+		'singular_name'      => __('Tour'),
+		'add_new'            => __('Nuevo Tour'),
+		'add_new_item'       => __('Agregar nuevo Tour'),
+		'edit_item'          => __('Editar Tour'),
+		'view_item'          => __('Ver Tour'),
+		'search_items'       => __('Buscar Tours'),
+		'not_found'          => __('Tour no encontrado'),
+		'not_found_in_trash' => __('Tour no encontrado en la papelera'),
 	);
 
-	$args_services = array(
-		'labels'      => $labels_services,
+	$args_tours = array(
+		'labels'      => $labels_tours,
 		'has_archive' => true,
 		'public'      => true,
 		'hierachical' => false,
 		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes' ),
 		'show_ui' => true,
 		'taxonomies'  => array( 'post_tag' ),
-		'menu_icon'   => 'dashicons-chart-pie',
+		'menu_icon'   => 'dashicons-tickets-alt',
 	);
 
 	/*|-----PRODUCTOS ----------------------|*/
@@ -187,8 +187,8 @@ function create_post_type(){
 	#SLIDER HOME
 	register_post_type( 'slider-home' , $args  );
 
-	#SERVICIOS
-	register_post_type( 'theme-services' , $args_services );
+	#TOURS
+	register_post_type( 'theme-tours' , $args_tours );
 
 	#PRODUCTOS
 	register_post_type( 'theme-products' , $args_products );

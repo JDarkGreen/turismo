@@ -68,6 +68,26 @@ include('admin/theme-customizer-modal.php');
 *------------------*/
 include('functions/register-menu.php');
 
+//Modificar menu inicio
+function new_nav_menu_items( $items , $args ) {
+
+  $homelink = '';
+    if( $args->theme_location === 'main-menu' ) :
+      
+      $active_class = is_home() ? 'active' : '';
+    
+      $homelink = '<li class="home '.$active_class.'">';
+      $homelink .= '<a href="'.home_url( '/' ) . '">';
+      $homelink .= '<i class="fa fa-home" aria-hidden="true"></i>';
+      $homelink .= '</a></li>';
+    endif;
+    
+    $items = $homelink . $items;
+    return $items;
+}
+add_filter( 'wp_nav_menu_items', 'new_nav_menu_items', 10, 2 );
+
+
 /*-----------------
 /* Agregando nuevos tipos de post
 *------------------*/
@@ -84,6 +104,19 @@ include('functions/register-metabox.php');
 *------------------*/
 
 include('functions/register-taxonomies.php');
+
+/*-----------------
+/* Customizar Campos Taxonomias
+*------------------*/
+
+include('functions/taxonomy/custom-fields-taxonomies.php');
+
+
+/*-----------------
+/* Registrar Sidebar
+*------------------*/
+
+include('functions/register-sidebars.php');
 
 
 /*-----------------
@@ -102,4 +135,10 @@ include('functions/scripts-js.php');
 *------------------*/
 
 include('functions/custom-functions.php');
+
+/**------------------------------------------------
+  * CARGAR WIDGETS
+  *------------------------------------------------
+  */
+require_once('functions/widgets/publicity.php');
 

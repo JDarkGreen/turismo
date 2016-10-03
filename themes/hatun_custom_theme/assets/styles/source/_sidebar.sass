@@ -1,0 +1,56 @@
+
+/***************************************************************************************/
+/**-- SECCION RELACIONADA A SIDEBAR  -----------------------------------------**/
+/***************************************************************************************/
+
+/*Contenedor Tours*/
+#containerTours
+	margin : 0 0 9px
+
+/* Title Sidebar */
+h2.sidebar-title
+	background : #008A00
+	color      : white 
+	font-size  : 14px
+	font-weight: 600 
+	line-height: 1em 
+	margin     : 0 0 1px
+	padding    : 9px 11px
+
+/* Item to link */
+a.item-link-tour
+	border         : 1px solid #008A00
+	color          : #008A00
+	font-size      : 14px
+	margin         : 0 0 1px 
+	padding        : 7px 8px
+	text-decoration: none !important
+	//span
+	span 
+		//before
+		&:before
+			background    : #008A00
+			content       : "" 
+			display       : inline-block
+			height        : 9px
+			line-height   : 1em 
+			margin        : 0 10px 0 0 
+			vertical-align: middle 
+			width         : 9px 
+
+/**
+  * Widgets 
+  */
+.itemWidgetPublicity
+	background: #008A00
+	margin    : 0 auto 8px
+	overflow  : hidden 
+	width     : 100%
+	//Image
+	img 
+		+transition( all 900ms ease-in-out )
+	//Hover item
+	&:hover 
+		img 
+			+scale( .95 )
+			

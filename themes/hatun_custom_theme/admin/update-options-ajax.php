@@ -33,7 +33,7 @@ $options_updated = array_merge( $options , $options_theme );
 //Actualizar Opciones
 update_option( 'theme_settings' , $options_updated );
 
-
+#echo json_encode($options_updated );
 echo json_encode("actualización completa");
 
 

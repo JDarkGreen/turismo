@@ -46,11 +46,8 @@ function custom_theme_settings_init()
 	//panel redes sociales
 	register_setting( 'customThemePageSocial' , 'theme_settings' );
 
-	//panel EMPRESA
-	register_setting( 'customThemePageEmpresa' , 'theme_settings' );
-
-	//panel información Header
-	register_setting( 'customThemePageHeader' , 'theme_settings' );	
+	//panel Mensaje Inicio
+	register_setting( 'customThemepageHome' , 'theme_settings' );	
 
 	//panel información Nosotros
 	register_setting( 'customThemePageNosotros' , 'theme_settings' );
@@ -104,6 +101,10 @@ function custom_theme_options_page()
 			<!-- portBox Handler -->
 	        <a href="#" data-display="optionsSocialLinks" data-animation="slide" data-animationspeed="500"> 
 	       	<?= __("Redes Sociales" , LANG ); ?> </a>
+
+			<!-- portBox Handler -->
+	        <a href="#" data-display="optionspageHome" data-animation="slide" data-animationspeed="500"> 
+	       	<?= __("Mensaje Página Inicio - Home" , LANG ); ?> </a>
 	       	
 			<!-- portBox Handler Empresa -->
 	        <a href="#" data-display="optionsBusiness" data-animation="clip" data-animationspeed="500"> 
@@ -142,6 +143,16 @@ function custom_theme_options_page()
 				do_settings_sections( 'customThemePageSocial' );
 			?>
 			<button class="js-update-ajax-options button button-primary" data-id="optionsSocialLinks"> Actualizar 
+			</button>
+		</div> <!---->
+
+    	<!-- portBox Content Home -->
+		<div id="optionspageHome" class="portBox">
+			<?php
+				settings_fields( 'customThemepageHome' );
+				do_settings_sections( 'customThemepageHome' );
+			?>
+			<button class="js-update-ajax-options button button-primary" data-id="optionspageHome"> Actualizar 
 			</button>
 		</div> <!---->
 

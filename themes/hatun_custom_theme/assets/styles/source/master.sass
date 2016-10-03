@@ -115,6 +115,44 @@ body.admin-bar
 	20% , 60% , 100%
 		+scale( 1 )
 
+//BOUNCE
++keyframes( bounce )
+	0% 
+		+transform( translateY(-100%) )
+		+opacity( 0 )
+	5% 
+		+transform( translateY(-100%) )
+		+opacity( 0 )
+	15% 
+		+transform( translateY(0) )
+		padding-bottom: 5px
+	30% 
+		+transform( translateY(-50%) )
+	40% 
+		+transform( translateY(0%) )
+		padding-bottom: 6px
+	50% 
+		+transform( translateY(-30%) )
+	70% 
+		+transform( translateY(0%) )
+		padding-bottom: 7px
+	80%
+		+transform( translateY(-15%) )
+	90%
+		+transform( translateY(0%) )
+		padding-bottom: 8px
+	95% 
+		+transform( translateY(-7%) )
+	97%
+		+transform( translateY(0%) )
+		padding-bottom: 9px
+	99%
+		+transform( translateY(-3%) )
+	100% 
+		+transform( translateY(0%) )
+		padding-bottom: 9px
+		+opacity( 1)
+
 
 /***************************************************************************************/
 /**--  SECCIONES COMUNES Y WRAPPER GENERAL -------------------------------------------**/
@@ -133,11 +171,28 @@ body.admin-bar
 .pageContentLayout
 	padding: 66px 0
 
+
+/***************************************************************************************/
+/**-- SIDEBAR   ----------------------------------------------------------------------**/
+/***************************************************************************************/
+
+@import "_sidebar.sass"
+
+
+
 /***************************************************************************************/
 /**--  HEADER   ----------------------------------------------------------------------**/
 /***************************************************************************************/
 
 @import "_header.sass"
+
+
+/**********************************************************************************/
+/**--  NAVIGATION  --------------------------------------------------------------**/
+/**********************************************************************************/
+
+@import "_navigation.sass"
+
 
 /***************************************************************************************/
 /**-- CAROUSELES   -------------------------------------------------------------------**/
@@ -151,38 +206,7 @@ body.admin-bar
 /**-- PÁGINA INICIO  -----------------------------------------------------------------**/
 /***************************************************************************************/
 
-//SECCCIÓN MISCELANEO
-.pageInicioMiscelaneo
-
-	background     : url('../../images/backgrounds/spa_home_fondo_belleza_peru.jpg') no-repeat
-	background-size: cover
-	min-height     : 518px
-	padding        : 36px 0
-
-	//Título
-	h2.title 
-		color      : #484847
-		font-family: "Montserrat",sans-serif
-		font-size  : 28px
-		font-weight: 600
-		margin     : 0 auto 25px
-		position   : relative
-		span
-			background: white
-			padding   : 0 10px 0 0
-			position  : relative
-			z-index   : 99
-		&:after 
-			border-bottom: 1px dotted black 
-			bottom       : 6px 
-			content      : ""
-			left         : 0
-			position     : absolute
-			right        : 0
-
-	
-
-
+@import "_home.sass"
 
 /***************************************************************************************/
 /**-- SECCION RELACIONADA A SERVICIOS ------------------------------------------------**/

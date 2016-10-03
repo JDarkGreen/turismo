@@ -25,9 +25,22 @@ function load_admin_custom_enqueue() {
 	* OPCIONES DEL TEMA
 	**/
 
+
 	//configuraciones generales de acuerdo a las librerias usadas anteriormente
 	wp_enqueue_style( 'wp-css-custom-theme-admin', THEMEROOT . "/admin/assets/css/custom-theme-admin.css" );
-	wp_enqueue_script('wp-js-custom-theme-admin', THEMEROOT . '/admin/assets/js/custom-theme-admin.js', array('jquery' ), '', true);
+
+
+	wp_register_script( 'wp-js-custom-theme-admin', THEMEROOT . '/admin/assets/js/custom-theme-admin.js' , array('jquery') , true );
+
+	/**
+	  * Pasar Variables
+	  */
+	$variables_array = array(
+		'templateDir' => get_bloginfo('template_directory')
+	);
+
+	wp_localize_script( 'wp-js-custom-theme-admin' , 'objectVariable', $variables_array );
+	wp_enqueue_script( 'wp-js-custom-theme-admin' );
 
 
 	/**
@@ -36,6 +49,12 @@ function load_admin_custom_enqueue() {
 	wp_enqueue_script('wp-js-upload-gallery', THEMEROOT . '/admin/assets/js/upload-container-gallery.js', array('jquery' ), '', true);
 	//Imágen Simple
 	wp_enqueue_script('wp-js-upload-single-image', THEMEROOT . '/admin/assets/js/upload-single-image.js', array('jquery' ), '', true);
+
+	/*
+	 * Color Picker for inputs
+	 */
+	wp_enqueue_style( 'wp-color-picker' );
+	wp_enqueue_script( 'wp-js-colorpicker-input' , THEMEROOT . '/admin/assets/js/wpcolorpicker-input.js' , array('jquery', 'wp-color-picker' ) , '1.0' , true );
 
 }
 
