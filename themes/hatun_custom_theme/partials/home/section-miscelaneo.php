@@ -1,90 +1,69 @@
 <?php  
 /**
   * ARCHIVO PARTIAL QUE MUESTRA LAS ENTRADAS DEL BLOG DE LA WEB
-***/
+  */
 
 ?>
 
 <section class="pageInicioMiscelaneo">
 
-	<!-- Wrapper de Contenido / Contenedor Layout -->
-	<div class="pageWrapperLayout containerRelative">
+	<div class="row">
+		
+		<div class="col-xs-12 col-sm-5">
 
-		<div class="row">
-			
-			<div class="col-xs-12 col-sm-8">
-
-				<div id="container-article-preview">
+			<!-- Agenda Turistica -->
+			<div id="tourist-events">
 					
-					<!-- Título -->
-					<h2 class="title"> <span>Blog</span> </h2>
+				<!-- Titulo -->
+				<h2 class="title-section">
+					<!-- Icon -->
+					<i class="fa fa-calendar-o" aria-hidden="true"> <span>21</span> </i>
+					<?= __( 'Agenda Turista' , LANG ); ?>
+				</h2>
 
-					<?php  
-						//Obtener entradas recientes
-						$args = array(
-							'order'          => 'DESC',
-							'orderby'        => 'date',
-							'post_status'    => 'publish',
-							'post_type'      => 'post',
-							'posts_per_page' => 2,
-						);
+				<div class="content">
+					
+					<!-- Imagen -->
+					<figure class="featured-image">
+						<a href="#">
+							<img src="<?= IMAGES ?>/agenda-turistica.jpg" alt="agenda-viajes-turisticos-hatun-tour" class="img-fluid m-x-auto d-block" />
+						</a>
+					</figure> <!-- /.featured-image -->
 
-						$entradas = get_posts( $args );
+					<!-- Nombre -->
+					<h3 class="title-event"> <?= __( 'Fiesta del Vino de Madeira' , LANG ); ?> </h3>
 
-						foreach( $entradas as $entrada  ) :
+					<!-- Extracto -->
+					<span class="excerpt-event d-block">  <?= __( 'En setiembre , participe en la fiesta dedicada a uno de los productos más (...) ' , LANG ) ?> </span>
 
-						if( has_post_thumbnail( $entrada->ID ) ):
-					?>
+					<!-- Boton ver más -->
+					<a href="#" class="btn-more-events text-uppercase"> <?= __( 'ver todos' , LANG ); ?> </a>
 
-					<!-- Article Preview -->
-					<article class="itemPreviewPost">
+				</div> <!-- /.content -->
 
-						<!-- Imagen -->
-						<figure class="featured-image">
-							<a href="<?= get_permalink( $entrada->ID ); ?>">
-								<?= get_the_post_thumbnail( $entrada->ID , 'full' , array('class'=>'img-fluid m-x-auto d-block') ); ?>
-							</a>
-						</figure> <!-- /. -->
+			</div> <!-- /tourist-events -->
 
-						<!-- Título -->
-						<h2 class=""> <?= $entrada->post_title; ?> </h2>
+		</div> <!-- /.col-xs-12 col-sm-8 -->
 
-						<!-- Extracto -->
-						<?php 
-							$limit_words = 35;
-							
-							$content     = $entrada->post_content;
-							$content     = apply_filters( 'the_content' , $content  );
-							
-							$content     = array_slice( explode(' ' , $content ) , 0 , $limit_words );
-							$content     = implode( ' ' , $content ) . '...<br/>';
 
-							echo $content;
-						?>
-
-						<a href="<?= get_permalink( $entrada->ID ); ?>" class="read-more"> Leer Más </a>
-						
-					</article> <!-- /.itemPreviewPost -->
-
-					<?php endif; endforeach; ?>
-
-				</div> <!-- /#container-article-preview -->
-
-			</div> <!-- /.col-xs-12 col-sm-8 -->
-
+		<div class="hidden-xs-down col-sm-2">
 			
-			<div class="col-xs-12 col-sm-4">
+			<div id="line-miscelaneo"></div>
 
-				<!-- Título -->
-				<h2 class="title"> <span>Facebook</span> </h2>
-				
-				<!-- Facebook  -->
-				<?php include( locate_template('partials/fan-page-facebook.php') ) ?>
-				
-			</div> <!-- /.col-xs-12 col-sm-4 -->
+		</div>
 
-		</div> <!-- /.row -->
-	
-	</div> <!-- /pageWrapperLayout containerRelative -->
+		<div class="col-xs-12 col-sm-5 text-xs-center">
+
+			<!-- Título -->
+			<h2 class="titleCommon__section">
+				<span> <?= __( 'Síguenos en Facebook' , LANG ); ?> </span>
+			</h2>
+			
+			<!-- Facebook  -->
+			<?php include( locate_template('partials/fan-page-facebook.php') ) ?>
+			
+		</div> <!-- /.col-xs-12 col-sm-4 -->
+
+	</div> <!-- /.row -->
 	
 </section> <!-- /.pageInicioBlog -->

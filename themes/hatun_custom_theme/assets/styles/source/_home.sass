@@ -24,3 +24,140 @@
 		text-decoration: none 
 
 
+/*-----------------------------------------------------------------*/
+/*-- SECCION DESTACADOS  */
+/*-----------------------------------------------------------------*/
+
+/**
+  * Seccion Contenedora
+  */
+.sectionHomeFeatures
+	/* Controles */
+	.owl-controls
+		.owl-dots
+			text-align: right
+			.owl-dot
+				+border-radius( 50% )
+				border    : 2px solid gray 
+				box-sizing: border-box 
+				display   : inline-block
+				height    : 12px 
+				margin    : 0 7px 0 0
+				width     : 12px
+				+transition( all 500ms ease-in )
+				//hover and active
+				&:hover , &.active 
+					background: gray 
+/**
+  * Item Tour Preview
+  */
+
+article.itemTourPreview
+	font-family: "GothamBook" , sans-serif
+	margin     : 0 36px 27px 0
+	max-height : 200px
+	max-width  : calc( (100%/4) - ((3*36px)/4) )
+	overflow   : hidden
+	width      : 100%
+
+	/* Elementos finales y cuartos elementos */
+	&:last-child , &:nth-child(4)
+		margin-right: 0
+	
+	//Imágen
+	figure.featured-image
+		background-size: cover 
+		height         : 130px
+		margin         : 0 auto 9px
+		max-width      : 174px
+		overflow       : hidden 
+		width          : 100%
+		//Link to tour
+		a 
+			bottom  : 0
+			position: absolute
+	
+	//Titulo
+	h2
+		font-size  : 20px
+		font-weight: 600
+		margin     : 0
+	//Span
+	span.text-excerpt
+		font-size : 16px
+
+
+
+/*-----------------------------------------------------------------*/
+/*-- SECCION ,MISCELANEO */
+/*-----------------------------------------------------------------*/
+
+/**
+  * Agenda Turista
+  */
+
+#tourist-events
+	border-left : 1px solid rgba(0,0,0, .09 )
+	border-right: 1px solid rgba(0,0,0, .09 )
+	font-family : "GothamBook", sans-serif
+
+	.content
+		padding: 20px 21px
+
+	//Título
+	h2.title-section
+		background     : url('../../images/backgrounds/bg-title-event.jpg') no-repeat
+		background-size: 100%
+		color          : white 
+		font-size      : 22px 
+		font-weight    : 600 
+		padding        : 10px 18px
+	//Icon 
+	i 
+		display : inline-block
+		margin  : 0 10px 0 
+		position: relative 
+		span 
+			font-size: 11px
+			padding  : 9px 4px 0
+			position : absolute
+			top      : 0
+
+	//Image
+	figure.featured-image
+		overflow: hidden
+		img 
+			+transition( all 700ms ease-in )
+		//:hover
+		&:hover 
+			img 
+				+scale(1.03)
+				+filter( sepia(100%) )
+
+	//Titulo evento
+	.title-event
+		color      : #4B4B4B
+		font-size  : 20px 
+		font-weight: 600
+	.excerpt-event
+		line-height: 1.2em
+		margin     : 0 0 12px
+
+	/*Boton mas eventos */
+	a.btn-more-events
+		background         : #FF9B00 url('../../images/backgrounds/bg-more-events.jpg') no-repeat
+		background-position: 100%
+		color              : white 
+		display            : inline-block
+		line-height        : 1em 
+		padding            : 12px 55px 12px 14px
+		text-decoration    : none !important
+
+
+/**
+  * Separación Miscelaneo
+  */
+#line-miscelaneo
+	background         : url('../../images/backgrounds/bg_line_green_v.png') no-repeat
+	background-position: center center 
+	height             : 430px

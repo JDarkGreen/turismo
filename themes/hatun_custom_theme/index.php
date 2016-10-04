@@ -62,6 +62,35 @@
 					
 				</div> <!-- /.text-xs-center -->
 
+				<!-- Espacio --> <br/><br/>
+
+				<?php  
+				/**
+				  * Importar Partial de Carousel de Promociones
+				  */
+					include( locate_template('partials/home/section-promotions.php') );
+
+				/**
+				  *  Importar Partial de Sección de Destacados
+				  */
+					include( locate_template('partials/home/section-features.php') );
+
+				echo '<br/><br/>'; 
+
+				/**
+				  *  Importar Partial de Sección de Miscelaneo
+				  */
+					include( locate_template('partials/home/section-miscelaneo.php') );
+
+				echo '<br/><br/><br/>'; 
+
+				/**
+				  *  Importar Partial de Sección de Blog
+				  */
+					include( locate_template('partials/home/section-blog.php') );
+				?>
+
+
 			</div> <!-- /.pageContentLayout  -->
 			
 		</div> <!-- /.col-xs-12 col-sm-9 -->

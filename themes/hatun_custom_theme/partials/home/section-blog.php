@@ -1,82 +1,62 @@
 <?php  
 /**
   * ARCHIVO PARTIAL QUE MUESTRA LAS ENTRADAS DEL BLOG DE LA WEB
-***/
+  */
+
+$args = array(
+	'order'          => 'DESC',
+	'orderby'        => 'date',
+	'post_status'    => 'publish',
+	'post_type'      => 'post',
+	'posts_per_page' => 3,
+);
+
+$posts = get_posts( $args );
 
 ?>
 
-<section class="pageInicioBlog text-xs-center">
+<section class="pageInicioBlog">
 
 	<!-- Título -->
-	<h2 class="titleCommon__section"> Blog </h2>
-	
-	<h3 class="subtitleCommon__section"> 
-		<span class="decoration"> // </span> Hacemos belleza
-	</h3>
-	
-	<!-- Wrapper de Contenido / Contenedor Layout -->
-	<div class="pageWrapperLayout containerRelative">
+	<h2 class="titleCommon__section bg-line-green">
+		<span> <?php _e( 'Visita nuestro Blog' , LANG ); ?> </span>
+	</h2>
 
-		<!-- Slider main container -->
-		<div id="carousel-blog" class="swiper-container" data-slides-per-view="3"
-		data-space-between="30">
+	<div class="containerFlex">
+		
+		<?php foreach( $posts as $entrada ): ?>
 
-		    <!-- Additional required wrapper -->
-		    <div class="swiper-wrapper">
+			<?php  
+				$feat_img = has_post_thumbnail($entrada->ID) ? wp_get_attachment_url( get_post_thumbnail_id($entrada->ID) ) : IMAGES . '/hatun_tour_default.jpg';
+			?>
 
-		    	<?php  
-					#Obtener todos las entradas del blog
-					$args = array(
-						'post_status'    => 'publish',
-						'post_type'      => 'post',
-						'posts_per_page' => -1,
-					);
-
-					$posts = get_posts( $args );
+			<!-- Item -->
+			<article class="itemPreviewPost">
 				
-					foreach( $posts as $entrada ):
-				?> 
-
-		        <!-- Slides de Libreria - contenedor -->
-		        <div class="swiper-slide">
-		    		
-		    		<!-- Item preview de servicio -->
-					<article class="itemPostPreview containerRelative">    	
-
-						<!-- Imagen -->
-						<?php  
-							$feat_img = wp_get_attachment_url( get_post_thumbnail_id( $entrada->ID ) );
-						?>
-						<a href="<?= get_permalink( $entrada->ID ); ?>">
-
-							<figure class="featured-image containerRelative">
-
-								<!--img src="<?= $feat_img; ?>" alt="<?= $entrada->post_name; ?>" class="img-fluid d-block m-x-auto" /-->	
-
-								<img data-src="<?= $feat_img; ?>" class="swiper-lazy img-fluid d-block m-x-auto" />
-
-            					<div class="swiper-lazy-preloader"></div>			
-
-							</figure>
-						
-						</a><!-- /end of link -->
-
-						<!-- Nombre -->
-						<h2 class=""><?= $entrada->post_title; ?></h2>
-
-					</article> <!-- /.itemServicePreview -->
-			
-		        </div> <!-- /.swipper-slide -->
-
-		    	<?php endforeach; ?>
+				<!-- Imagen Destacada -->
+				<figure class="featured-image containerRelative">
+					
+					<a href="<?= get_permalink($entrada->ID); ?>">
 	
-		    </div> <!-- /.swiper-wrapper -->
-		    
-		    <!-- If we need scrollbar -->
-		    <div class="swiper-scrollbar"></div>
+						<img src="<?= $feat_img; ?>" alt="<?= $entrada->post_name; ?>" class="img-fluid d-block m-x-auto" />
 
-		</div> <!-- /.swiper-container -->
+						<div class="date-post text-uppercase text-xs-center">
+							<span class="d-block"> <?= get_the_date( 'd' , $entrada->ID  ); ?> </span>
+							<?= __( get_the_date( 'F' , $entrada->ID ) , LANG ) . '<br/>' ; ?>
+							<?= get_the_date( 'Y' , $entrada->ID ); ?>
+						</div>
+						
+					</a> <!-- /. -->
 
-	</div> <!-- /pageWrapperLayout containerRelative -->
+				</figure> <!--  -->
+
+				<!-- Titulo -->
+				<h2 class="text-uppercase"> <?= __( $entrada->post_title , LANG ); ?> </h2>
+
+			</article> <!-- /.itemPreviewPost -->
+
+		<?php endforeach; ?>
+
+	</div> <!-- /.containerFlex -->
 	
 </section> <!-- /.pageInicioBlog -->

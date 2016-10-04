@@ -114,18 +114,16 @@ img.aligncenter, img.alignright, img.alignleft
 /***************************************************************************************/
 //++ Botón Ver Más
 .btn-show-more
-	+box-shadow( 0px 1px 3px #000 )
 	+scale( 1 )
-	background-color: #FD9A00
-	border          : none 
-	color           : white
-	display         : inline-block
-	font-size       : 15px
-	font-style      : normal
-	line-height     : 1em
-	padding         : 5px 16px
-	text-decoration : none 
-	transition      : all 500ms ease !important
+	+transition( all 600ms ease-out )
+	background     : #FF9B00
+	color          : white 
+	font-family    : "GothamMedium" , sans-serif
+	font-size      : 13px
+	line-height    : 1em 
+	padding        : 6px 16px 
+	text-decoration: none !important 
+	text-transform : uppercase 
 	//Hovered
 	&:hover 
 		+scale( 1.09 )
@@ -186,25 +184,21 @@ img.aligncenter, img.alignright, img.alignleft
 
 //Título de Sección
 .titleCommon__section
-	color      : #484847 
-	font-family: "Montserrat", sans-serif
-	font-size  : 28px 
+	color      : #008A00
+	font-family: "GothamMedium" , sans-serif
+	font-size  : 28px
 	font-weight: 600
-	margin     : 0 auto 25px
-	position   : relative
-	&:after 
-		border  : 1px dotted #484847
-		content : ""
-		left    : 0 
-		position: absolute 
-		right   : 0
-		top     : 50%
+	margin     : 0 auto 21px
+	//Span
 	span 
-		background: white
-		display   : inline-block
-		padding   : 0 25px
-		position  : relative
-		z-index   : 9
+		background: white 
+		padding   : 0 20px 0 0
+
+	//background
+	&.bg-line-green
+		background         : url('../../images/backgrounds/bg_title.png') repeat-x
+		background-position: center bottom 
+
 
 //Subtitulo seccion 
 .subtitleCommon__section

@@ -8,19 +8,24 @@
 	border-right: 5px solid white 
 	padding     : 0 0 35px
 
-/** Preview de Items **/
+/* Preview de Items */
 article.itemPreviewPost
 	background : white
 	display    : inline-block 
-	font-family: "Montserrat", sans-serif
-	margin     : 0 15px 16px 0
-	max-width  : 301px
-	padding    : 22px 27px
+	font-family: "GothamBook",sans-serif
+	margin     : 0 18px 20px 0
+	max-width  : calc( (100%/3) - ((2*18px)/3) )
 	width      : 100%
+
+	//Terceros y últimos elementos
+	&:last-child , &:nth-child(3)
+		margin-right : 0
+
 	//Imágen
 	figure.featured-image
-		margin    : 0 auto 33px
-		max-height: 187px
+		border    : 1px solid rgba(0,0,0,.1)
+		margin    : 0 auto 22px
+		max-height: 158px
 		overflow  : hidden
 		img 
 			+transition( all 700ms ease )
@@ -28,23 +33,30 @@ article.itemPreviewPost
 		&:hover 
 			img 
 				+scale( 1.2 )
+
+		//Date post
+		.date-post 
+			background : url(../../images/backgrounds/bg_date_post.png) no-repeat
+			bottom     : 0
+			color      : gray 
+			font-size  : 11px
+			line-height: 1.6em
+			padding    : 90px 0 0px 30px
+			position   : absolute
+			right      : 0
+			top        : 0
+			width      : 95px
+			word-break : break-all
+
 	//Título
 	h2 
-		font-size  : 18px
+		font-size  : 16px
 		font-weight: 600
-	//Párrafo
-	p 
-		font-size : 13px
-	//Link 
-	a.read-more
-		color          : #00948E
-		font-size      : 14px
-		text-decoration: none 
+		margin     : 0
 
 
 /**
-  * Contenedor De 
-  * Página de Blog
+  * Contenedor De Página de Blog
   */
 .sectionContainerBlog
 	padding : 100px 0

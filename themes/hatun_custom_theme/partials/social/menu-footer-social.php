@@ -10,7 +10,7 @@
 
 ?>
 
-<ul id="menu-footer-social-link">
+<ul id="menu-footer-social-link" class="containerFlex">
 	
 	<!-- Si existe facebook -->
 	<?php if( has_facebook() ) : ?>

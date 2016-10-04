@@ -21,6 +21,18 @@ include("metabox/common/mb_custom_gallery.php");
 /**[ INCLUIR METABOX DE REVOLUTION EFFECT ]**/
 include("metabox/slider-home/mb_revolution_slider.php");
 
+/******************************************************************/
+/**- PROMOCIONES **/
+/******************************************************************/
+
+/**
+  * Metabox de duración de viaje
+  */
+include('metabox/promotions/mb_duration_travel.php');
+/**
+  * Metabox de precio 
+  */
+include('metabox/promotions/mb_price_travel.php');
 
 /******************************************************************/
 /**- SERVICIOS **/
@@ -37,10 +49,10 @@ include("metabox/services/mb_service_makeup.php");*/
 /**- PRODUCTOS **/
 /******************************************************************/
 
-/*Metabox de Precio*/
+/*Metabox de Precio
 include('metabox/products/mb_price_product.php' );
-/*Metabox de Calificación*/
-include('metabox/products/mb_qualify_product.php' );
+/*Metabox de Calificación
+include('metabox/products/mb_qualify_product.php' );*/
 
 
 
