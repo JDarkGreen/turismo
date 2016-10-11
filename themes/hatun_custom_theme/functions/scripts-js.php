@@ -33,15 +33,11 @@ function load_custom_scripts()
 	wp_enqueue_script('parsley', THEMEROOT . '/assets/js/vendor/parsley.min.js', array('jquery'), '2.3.11', true);
 	wp_enqueue_script('p_idioma_es', THEMEROOT . '/assets/js/vendor/i18n/es.js', '' , false , true);
 
-	/**[Cargar SlideBar]**/
-	wp_enqueue_script('wp-slidebar-js', THEMEROOT . '/assets/js/vendor/slidebars.min.js', array('jquery'), '2.0.2', true);
+	/** [Cargar SlideBar] **/
+	//wp_enqueue_script('wp-slidebar-js', THEMEROOT . '/assets/js/vendor/slidebars.min.js', array('jquery'), '2.0.2', true);
 
-	/**[Cargar Scrollbar]**/
-	wp_enqueue_script('wp-scrollbar-js', THEMEROOT . '/assets/js/vendor/scrollbar/idangerous.swiper.scrollbar.js', array('jquery'), '2.4.1', true);	
-
-
-	/**[Cargar Isotope]**/
-	wp_enqueue_script('wp-isotope-js', THEMEROOT . '/assets/js/vendor/isotope.pkgd.min.js', array('jquery'), '3.0.0', true);	
+	/** [Cargar ScrollReveal] **/
+	wp_enqueue_script('wp-scrollreveal-js', THEMEROOT . '/assets/js/vendor/scrollreveal/scrollreveal.min.js', array('jquery'), '' , true );	
 
 
 	//custom script

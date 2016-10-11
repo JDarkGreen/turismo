@@ -16,7 +16,7 @@ $options = get_option("theme_settings");
 
 ?>
 	
-	<footer id="mainFooter" class="mainFooter">
+	<footer id="mainFooter" class="mainFooter scroll-animate">
 
 		<!-- Wrapper de Contenido  -->
 		<div class="pageWrapperLayout containerRelative">
@@ -94,13 +94,11 @@ $options = get_option("theme_settings");
 		
 	</footer> <!-- /.#mainFooter -->
 	
-	</div> <!-- /end sliderbar container -->
+	<!--/div> <! /end sliderbar container -->
 
-	<?php wp_footer(); ?>
-
-	
 	<script> var url = "<?= THEMEROOT ?>"; </script>
 
+	<?php wp_footer(); ?>
 
 </body>
 </html>

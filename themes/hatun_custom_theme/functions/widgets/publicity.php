@@ -149,7 +149,7 @@
 			if( !empty($ad_img) ):
 ?>
 			
-			<div class="itemWidgetPublicity">
+			<div class="itemWidgetPublicity scroll-animate">
 				
 				<!-- Link -->
 				<a href="<?= $ad_link; ?>">

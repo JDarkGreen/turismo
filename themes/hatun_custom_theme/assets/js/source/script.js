@@ -31,28 +31,6 @@ function getWidthBrowser()
 
 		});
 
-		/*|----------------------------------------------------------------------|*/
-		/*|-----  SLIDEBAR MENU NAVEGACION RESPONSIVE -----|*/
-		/*|----------------------------------------------------------------------|*/
-
-		// Initialize Slidebars
-		var controller = new slidebars();
-		controller.init();
-
-		//Eventos
-
-		//Abrir contenedores
-		j(".js-toggle-mobile-nav").on( 'click', function ( event ) {
-		  // Stop default action and bubbling
-		  event.stopPropagation();
-		  event.preventDefault();
-
-		  //Su contenedor id 
-		  var id_container = this.getAttribute('data-id');
-
-		  // Toggle the Slidebar with id 
-		  controller.toggle( id_container );
-		});
 
 		/*|----------------------------------------------------------------------|*/
 		/*|-----  CAROUSEL HOME  LIBRERIA OWL CAROUSEL -----|*/
@@ -180,6 +158,37 @@ function getWidthBrowser()
 			'closeSpeed' : 300,
 		});
 
+		
+		/*|----------------------------------------------------------------------|*/
+		/*|-----  SCROLLREVEAL - animación on scroll   -----|*/
+		/*|----------------------------------------------------------------------|*/
+		
+		window.sr = ScrollReveal({ reset: true });
+
+		// Customizing a reveal set
+		sr.reveal('.scroll-animate' , { duration: 1200 } , 50 );
+
+		//Rotate Animation
+		var fooReveal = {
+		  delay    : 200,
+		  distance : '90px',
+		  easing   : 'ease-in-out',
+		  rotate   : { z: 10 },
+		  scale    : 1.1,
+		  reset    : false,
+		};
+		sr.reveal('.scroll-animate-rotate', fooReveal );
+
+		//Perspective 
+		sr.reveal('.sr-perpective', { 
+			rotate  : { y: 65 },
+			easing  : 'ease-in',
+			delay   : 400,
+			scale   : 0.8,
+			duration: 2000,
+		} , 60 );
+
+
 
 		/*|----------------------------------------------------------------------|*/
 		/*|-----  VALIDAR FORMULARIO   -----|*/
@@ -248,7 +257,6 @@ function getWidthBrowser()
 
 		/*---------------------------------------------------------*/
 		
-
 	});
 
 /*|----------------------------------------------------------------------|*/

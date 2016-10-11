@@ -59,153 +59,108 @@
 <body <?php body_class(); ?>>
 
 
-<!-- Contenedor Header Mobile  -->
-<header class="mainHeader hidden-sm-up containerFlex containerAlignContent" canvas="">
+<header id="mainHeader" class="hidden-xs-down">
+	
+	<!-- Wrapper de Contenido / Contenedor Layout -->
+	<div class="pageWrapperLayout containerRelative">
 
-	<!-- Icono abrir menu lateral -->
-	<div class="icon-header">
-		<i class="js-toggle-mobile-nav fa fa-bars" data-id="id-container-menu" aria-hidden="true"></i>
-	</div><!-- /.icon-header -->
+		<!-- Lista de Items -->
+		<ul id="branding" class="containerFlex containerAlignContent">
+			
+			<!-- Widget Wheater -->
+			<li id="meteo_main" class="item-branding text-uppercase">
 
-	<!-- Logo -->
-	<h1 id="mainLogo">
-		<a href="<?= site_url(); ?>">
-			<img src="<?= $logo_theme_url; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid d-block m-x-auto" />
-		</a>
-	</h1> <!-- /.mainLogo -->
+				<div id="meteo_main_icon" class="clear" title="Cielos despejados">
+                </div>
 
-	<!-- Icono abrir menu lateral derecha -->
-	<div class="icon-header">
-		<i class="js-toggle-mobile-nav fa fa-bars" data-id="id-container-post" aria-hidden="true"></i>
-	</div><!-- /.icon-header -->	
+                <div id="meteo_main_detalhes">
+                    <div class="meteo_main_localidade">Santarém 
+                        <span class="meteo_main_date"> 
+                        	/ <?= date('D') . '.' . date('d'); ?>   
+                        	<i class="fa fa-caret-right" aria-hidden="true"></i>
+                        </span>
+                   	</div>
+                    <span class="meteo_main_temp" title="31°C/13°C">
+                    31°C/13°C </span>
 
-</header> <!-- /.mainHeader -->
-
-<!-- Menu lateral Izquierda -->
-<div off-canvas="id-container-menu left push">
-
-	<aside class="sidebarMobile">
-		<?php include( locate_template('partials/main-navigation-small.php') ); ?>
-	</aside> <!-- /.sidebarMobile -->
-
-</div> <!-- /.id-container-menu left push -->
-
-
-<!-- Menu lateral Derecha -->
-<div off-canvas="id-container-post right push">
-
-	<aside class="sidebarMobile">
-		<?php include( locate_template('partials/categories-sidebar.php') ); ?>
-	</aside> <!-- /.sidebarMobile -->
-
-</div> <!-- /.id-container-menu left push -->
-
-
-<!-- Contenedor canvas wrapper para slider mobile -->
-<div canvas="container">
-
-	<header id="mainHeader" class="hidden-xs-down">
-		
-		<!-- Wrapper de Contenido / Contenedor Layout -->
-		<div class="pageWrapperLayout containerRelative">
-
-			<!-- Lista de Items -->
-			<ul id="branding" class="containerFlex containerAlignContent">
+                </div>
 				
-				<!-- Widget Wheater -->
-				<li id="meteo_main" class="item-branding text-uppercase">
+			</li>
 
-					<div id="meteo_main_icon" class="clear" title="Cielos despejados">
-                    </div>
+			<!-- Idioma -->
+			<li id="idioma_main" class="item-branding">
 
-                    <div id="meteo_main_detalhes">
-                        <div class="meteo_main_localidade">Santarém 
-                            <span class="meteo_main_date"> 
-                            	/ <?= date('D') . '.' . date('d'); ?>   
-                            	<i class="fa fa-caret-right" aria-hidden="true"></i>
+				<ul id="language_menu" class="language_menu hovered">
+                    <li class="selected">
+
+                        <a href="#" id="idioma_title" class="header_title" title="">
+                            
+                            <span class="idioma_title_label" title="Idioma">IDIOMA 
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </span>
-                       	</div>
-                        <span class="meteo_main_temp" title="31°C/13°C">
-                        31°C/13°C </span>
+                            
+                            <span class="idioma_title_lang">Español</span>
+                        </a>
 
-                    </div>
-					
-				</li>
+                        <div class="idioma_subitems">
+                            <ul>
+                            	<li>
+                                    <a href="https://www.visitportugal.com/pt-pt/weather" title="Português">Português</a>
+                                </li>
+                                <li><a href="https://www.visitportugal.com/en/weather" title="English">English</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul> <!-- /fin de menu de idioma -->
+			</li>
 
-				<!-- Idioma -->
-				<li id="idioma_main" class="item-branding">
+			<!-- Logo -->
+			<li id="logo_main" class="item-branding">
+				<h1 id="mainLogo">
+					<a href="<?= site_url(); ?>">
+						<img src="<?= $logo_theme_url; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid d-block m-x-auto" />
+					</a>
+				</h1> <!-- /.mainLogo -->
+			</li> 
 
-					<ul id="language_menu" class="language_menu hovered">
-                        <li class="selected">
+			<!-- Contacto -->
+			<li class="item-branding">
+				<!-- title --> <h2 class="title text-uppercase"> <?= __('contacte con nosotros' , LANG ); ?> </h2>
 
-                            <a href="#" id="idioma_title" class="header_title" title="">
-                                
-                                <span class="idioma_title_label" title="Idioma">IDIOMA 
-                                <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                </span>
-                                
-                                <span class="idioma_title_lang">Español</span>
-                            </a>
+				<!-- Whatsapp -->
+				<span class="whatsaap">  
+				<!-- Icon whatsapp --> <i id="icon-whatsapp"></i> 
+				+51 99944558
+				</span>
 
-                            <div class="idioma_subitems">
-                                <ul>
-                                	<li>
-                                        <a href="https://www.visitportugal.com/pt-pt/weather" title="Português">Português</a>
-                                    </li>
-                                    <li><a href="https://www.visitportugal.com/en/weather" title="English">English</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul> <!-- /fin de menu de idioma -->
-				</li>
+			</li>
 
-				<!-- Logo -->
-				<li id="logo_main" class="item-branding">
-					<h1 id="mainLogo">
-						<a href="<?= site_url(); ?>">
-							<img src="<?= $logo_theme_url; ?>" alt="<?php bloginfo('description'); ?>" class="img-fluid d-block m-x-auto" />
-						</a>
-					</h1> <!-- /.mainLogo -->
-				</li> 
+			<!-- Compartir -->
+			<li class="item-branding">
+				
+				<!-- title --> <h2 class="title text-uppercase"> <?= __('compartir' , LANG ); ?> </h2>
+				
+				<!-- RssFeed -->
+				<span>
+		  			<a href="#" target="_blank" title="" class="link-not-decoration">
+              			<img src="<?= IMAGES ?>/icons/rss_icon.png" title="RSS" alt="RSS" />
+              		</a>
+              	</span> <!-- / -->
 
-				<!-- Contacto -->
-				<li class="item-branding">
-					<!-- title --> <h2 class="title text-uppercase"> <?= __('contacte con nosotros' , LANG ); ?> </h2>
+              	<span>
+		  			<a href="#" class="link-not-decoration" title="Compartir Web">
+              			<img src="<?= IMAGES ?>/icons/share_icon.png" title="Compartir" alt="Compartir">
+              		</a>
+		  		</span>
 
-					<!-- Whatsapp -->
-					<span class="whatsaap">  
-					<!-- Icon whatsapp --> <i id="icon-whatsapp"></i> 
-					+51 99944558
-					</span>
+			</li>
 
-				</li>
+		</ul> <!-- /.branding -->
 
-				<!-- Compartir -->
-				<li class="item-branding">
-					
-					<!-- title --> <h2 class="title text-uppercase"> <?= __('compartir' , LANG ); ?> </h2>
-					
-					<!-- RssFeed -->
-					<span>
-			  			<a href="#" target="_blank" title="" class="link-not-decoration">
-                  			<img src="<?= IMAGES ?>/icons/rss_icon.png" title="RSS" alt="RSS" />
-                  		</a>
-                  	</span> <!-- / -->
+	</div> <!-- /.pageWrapperLayout containerRelative -->
 
-                  	<span>
-			  			<a href="#" class="link-not-decoration" title="Compartir Web">
-                  			<img src="<?= IMAGES ?>/icons/share_icon.png" title="Compartir" alt="Compartir">
-                  		</a>
-			  		</span>
-
-				</li>
-
-			</ul> <!-- /.branding -->
-
-		</div> <!-- /.pageWrapperLayout containerRelative -->
-
-	</header> <!-- /#mainHeader -->
+</header> <!-- /#mainHeader -->
 
 
 

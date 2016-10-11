@@ -27,97 +27,138 @@ $options = get_option("theme_settings");
 include( locate_template('partials/banner-top-page.php') );
 
 /*
- * Obtener todos las promociones
- */ 
-	$args  = array(
-		'posts_per_page' => -1,
-		'post_type'      => 'theme-promotions',
-		'order'          => 'ASC',
-		'orderby'        => 'menu_order',
-		'post_status'    => 'publish'
-	);
-	
-	$promotions = get_posts( $args );
+ * Importar Navegación Principal
+ */
+include( locate_template('partials/main-menu-navigation.php') );
+
+/*
+ * Obtener todos los tours que son promociones
+ */
+$posts_por_page = 9;
+$paged          = get_query_var('paged') ? get_query_var('paged') : 1;
+
+$args = array(
+	'post_type'      => 'theme-promotions',
+	'posts_per_page' => $posts_per_page,
+	'paged'          => $paged , 
+	'order'          => 'DESC',
+	'orderby'        => 'menu_order',
+);
+
+//Query
+$the_query = new WP_Query( $args );
+
 ?>
 
-<!-- Contenedor Sección -->
-<section class="sectionContainerPromotions">
-	
-	<!-- Wrapper de Contenido / Contenedor Layout -->
-	<div class="pageWrapperLayout containerRelative">
 
+<!-- Wrapper de Contenido  -->
+<div class="pageWrapperLayout containerRelative">
 
-		<!-- Contenedor de Carousel y flechas -->
-		<div id="containerPromotion" class="containerRelative pull-sm-right">
-
-			<?php if( count($promotions) >= 2 ): ?>
-
-			<!-- Carousel De Promociones -->
-			<div id="carousel-promotions" class="js-carousel-gallery" data-items="1" data-items-responsive="1" data-margins="1" data-dots="false" data-autoplay="true" data-timeautoplay="5000">
+	<div class="row">
+		
+		<!-- Cargar Sidebar -->
+		<div class="col-xs-12 col-sm-3">
 			
-				<?php foreach( $promotions as $promotion ) : ?>
+			<?php get_sidebar(); ?>
+			
+		</div> <!-- /.col-xs-12 col-sm-3 -->
+
+		<!-- Contenido -->
+		<div class="col-xs-12 col-sm-9">
+
+			<!-- Contenedor Texto Layout -->
+			<div class="pageContentLayout pagePromotions">
+
+				<div class="text-xs-center">
+
+					<!-- Título -->
+					<h2 class="titleCommon__page">
+						<?php  
+							$text_title = !empty($post->post_excerpt) ? $post->post_excerpt : 'Las mejores Promociones';
+
+							_e( $text_title , LANG );
+						?>
+						
+					</h2> <!-- titleCommon__page -->
+
+					<!-- Texto -->
+					<div class="content-welcome m-x-auto">
+						<?= apply_filters( 'the_content' , __( $post->post_content , LANG ) ); ?>
+					</div> <!-- /.content-welcome -->
+				
+				</div> <!-- /.text-xs-center -->
+
+				<!-- Espacios --> <br /><br />
+
+				<?php if($the_query->have_posts()): ?>
+
+				<!-- Contenedor de Ítems -->
+				<section class="sectionItemTours containerFlex containerAlignContent">
 					
-					<!-- Imagen -->
-					<?php if( has_post_thumbnail( $promotion->ID ) ): 
+					<?php 
+						while( $the_query->have_posts() ) : 
+						$the_query->the_post(); 
 
-						$url_img = wp_get_attachment_url( get_post_thumbnail_id( $promotion->ID ) );
+						/* Ruta image */
+						$feat_img = wp_get_attachment_url( get_post_thumbnail_id() );
+						$feat_img = !empty($feat_img) ? $feat_img : IMAGES  . '/hatun_tour_default.jpg';
+
+						/* Metabox de duración */
+						$mb_duration = get_post_meta( get_the_ID() , 'duration_travel' , true );
+						/* Metabox de precio */
+						$mb_price = get_post_meta( get_the_ID() , 'price_travel' , true );
 					?>
-						<!-- Galeria -->
-						<a href="<?= $url_img ?>" class="gallery-fancybox" title="<?= $promotion->post_title; ?>" rel="promotion">
-							<?= get_the_post_thumbnail( $promotion->ID , 'full' , array('class'=>'img-fluid d-block m-x-auto') ); ?>
-						</a>
 
-					<?php endif; ?>
+						<!-- Item Preview Promotion -->
+						<article class="itemPreviewPromotion scroll-animate">
+							
+							<a href="<?= get_permalink(); ?>">
+								<figure class="featured-image" style="background-image : url(<?= $feat_img; ?>)">
+								</figure>
+							</a>
+							
+							<div class="containerRelative">
+			
+								<!-- Duración -->
+								<p> <?= __('Duración: ',LANG); ?> <span> <?= __($mb_duration , LANG ); ?> 
+								</span> </p>
 
-				<?php endforeach; ?>
+								<!-- Precio -->
+								<p> <?= __('Desde: ',LANG); ?> <span> <?= __($mb_price , LANG ); ?> 
+								</span> </p>
 
-			</div> <!-- /.carousel-promotions -->
+								<!-- Botón ver más  -->
+								<a href="<?= get_permalink(); ?>" class="btn-show-more btn-to-promotion text-uppercase"> <?= __('leer más',LANG); ?> </a>
 
-			<?php else: ?>
+							</div> <!-- /.containerRelative -->
 
-				<!-- Imagen -->
-				<?php if( has_post_thumbnail( $promotions[0]->ID ) ): 
+						</article>
 
-					$url_img = wp_get_attachment_url( get_post_thumbnail_id( $promotions[0]->ID ) );
+					<?php endwhile; ?>
+
+				</section> <!-- /.sectionItemTours -->
+
+				<?php else: ?>
+
+				<?php endif; wp_reset_postdata(); ?>
+				
+				<?php 
+				echo '<br/><br/><br/>'; 
+
+				/*
+				 * Importar Partial de Sección de Blog
+				 */
+				include( locate_template('partials/home/section-blog.php') );
 				?>
-					<!-- Galeria -->
-					<a href="<?= $url_img ?>" class="gallery-fancybox" title="<?= $promotions[0]->post_title; ?>" rel="promotion">
-						<?= get_the_post_thumbnail( $promotions[0]->ID , 'full' , array('class'=>'img-fluid d-block m-x-auto') ); ?>
-					</a>
 
-				<?php endif; ?>
+			</div> <!-- /.pageContentLayout  -->
+			
+		</div> <!-- /.col-xs-12 col-sm-9 -->
+		
+	</div> <!-- /.row -->
 
-			<?php endif; ?>
-
-			<!-- Flechas -->
-			<div class="">
-	
-				<a href="#" class="arrowCarousel__prom arrow-prev js-carousel-prev" data-slider="carousel-promotions">
-					<i class="fa fa-chevron-left" aria-hidden="true"></i>
-				</a>
-
-				<a href="#" class="arrowCarousel__prom arrow-next js-carousel-next" data-slider="carousel-promotions">
-					<i class="fa fa-chevron-right" aria-hidden="true"></i>
-				</a>
-
-			</div> <!-- /end of arrows -->
-
-		</div> <!-- #containerPromotion -->
-
-		<!-- Limpiar floats --> <div class="clearfix"></div>
-
-	</div> <!-- /.pageWrapperLayout -->
-
-</section> <!-- /.mainContainerService -->
-
-
-<?php  
-	/*
-	 * Importar partial de contacto
-	 */
-	include( locate_template('partials/section-contact-banner.php') );
-?>
-
+</div> <!-- /.pageWrapperLayout containerRelative -->
 
 <!-- Footer -->
 <?php get_footer(); ?>
+

@@ -28,15 +28,14 @@
 	//Imagen
 	figure.featured-image 
 		+transition( all 500ms ease-out )
-		background-size: 100%
+		background-size: 100% 100%
 		height         : 114px
 		margin         : 0 auto 7px
 		overflow       : hidden  
 		width          : 100%
 		//:hover 
 		&:hover 
-			background-size: 115%
-
+			background-size: 105% 105%
 	//Parrafos
 	p 
 		color      : #4B4B4B
@@ -71,3 +70,51 @@
 		left: -30px
 	&.arrow-next
 		right: -30px
+
+
+/*
+ * Contenedor de Página
+ */
+.sectionItemTours
+	/* Sobreescribir items preview */
+	.itemPreviewPromotion
+		margin   : 0 23px 52px 0
+		max-width: calc( (100%/3) - ( (2*23px) / 3 ) )
+		width    : 100%
+		//Terceros y últimos elementos
+		&:nth-child(3n) , &:last-child 
+			margin-right: 0 !important
+		
+		p 
+			//span featured
+			span 	
+				color : #2F70B9
+
+
+/*
+ * Single o ítem detallado de Promociones
+ */
+.singlePromotion
+	font-family: "GothamBook", sans-serif	
+
+	//Títle 
+	.titleCommon__page 
+		margin-bottom: 5px
+	//Subtitle 
+	h3.the-subtitle 
+		font-size: 18px
+
+	//Imágen Destacada
+	figure.featured-image 
+		background         : url('../../images/backgrounds/bg_title.png') no-repeat
+		background-position: center bottom
+		padding            : 0 0 40px 
+
+/*
+ * Contenedor de Texto
+ */
+.singlePromotionContent 
+	h2 , h3 , h4 , h5 , h6
+		color      : #008A00
+		font-size  : 20px 
+		font-weight: 600

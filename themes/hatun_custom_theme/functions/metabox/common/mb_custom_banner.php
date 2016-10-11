@@ -34,7 +34,7 @@ function cd_mb_featured_banner_cb( $post )
         <!-- Input Oculto -->
         <input type="hidden" id="mb_featured_banner" name="mb_featured_banner" value="<?= trim($mb_featured_banner); ?>" />
 
-        <p class="description"> Añade una imagen para banner personalizado - !No te olvides ACTUALIZAR! para guardar los datos</p>
+        <p class="description"> Añade una imagen para banner personalizado - medidas: 1920x648 !No te olvides ACTUALIZAR! para guardar los datos</p>
 
         <!-- Contenedor Padre -->
         <div class="customize-img-container">
