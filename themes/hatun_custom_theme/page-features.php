@@ -43,6 +43,7 @@ $args = array(
 	'post_status'    => 'publish',
 	'post_type'      => 'theme-tours',
 	'posts_per_page' => $posts_por_page,
+	'paged'          => $paged,
 );
 
 //Query
@@ -130,13 +131,13 @@ $the_query = new WP_Query( $args );
 					</div> <!-- /.containerFlex containerAlignContent -->
 
 					<!-- Páginación -->
-					<section class="paginationTour">
+					<section class="paginationTour text-xs-center text-sm-right">
 						<?php $max_pages = $the_query->max_num_pages; ?>
 					
 						<?php for( $i = 1 ; $i <= $max_pages ; $i++ ) { ?>
 
 						<!-- Link -->
-						<a href="<?= get_pagenum_link($i); ?>" class="<?= $paged == $i ? 'active' : '' ?>"> <?= $i ?></a>
+						<a href="<?= get_pagenum_link($i); ?>" class="<?= $paged == $i ? 'active' : '' ?>"> <?= $i ?> </a>
 
 						<?php } ?>
 						

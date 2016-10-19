@@ -145,6 +145,22 @@ function getWidthBrowser()
 			j("#"+slider).trigger('next.owl.carousel' , [900] );
 		});
 
+		/*
+		 * INDICADORES DE CAROUSEL
+		 */
+		j(".js-carousel-indicator").on("click",function(e){
+
+			e.preventDefault();
+			var slider  = j(this).attr('data-slider');
+			var slideto = j(this).attr('data-to');
+			j("#"+slider).trigger( 'to.owl.carousel' , [ slideto , 900 ] );
+
+			/* Quitar y agregar clase activa */
+			j(".js-carousel-indicator").removeClass('active');
+			j(this).addClass('active');
+			
+		});
+
 
 		/*|----------------------------------------------------------------------|*/
 		/*|-----  FANCYBOX GALERIAS   -----|*/

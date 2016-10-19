@@ -50,6 +50,24 @@ include( 'custom-functions/functions-banner-page.php' );
 
 include( 'custom-functions/functions-gallery-post.php' );
 
+/**
+* ---------------------------------------------------------------
+* -- CONSEGUIR BREADCRUMBS 
+* ---------------------------------------------------------------
+**/
+
+include( 'custom-functions/functions-breadcrumbs.php' );
+
+/**
+* ---------------------------------------------------------------
+* -- EXTRAER EL ID DE VIDEO DE YOUTUBE
+* ---------------------------------------------------------------
+**/
+
+if( stream_resolve_include_path('custom-functions/functions-get-id-youtube.php') ):
+	include( 'custom-functions/functions-get-id-youtube.php' );
+endif;
+
 
 
 

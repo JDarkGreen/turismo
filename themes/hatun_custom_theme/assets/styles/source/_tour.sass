@@ -1,0 +1,75 @@
+
+/******************************************************************/
+/**-- SECCION RELACIONADA A TOURS DETALLADO ---------------------**/
+/******************************************************************/
+
+/*
+ * ITEM TOUR PREVIEW
+ */
+.itemTourPreview
+	font-family: "GothamBook" , sans-serif
+	margin     : 0 36px 27px 0
+	max-height : 205px
+	max-width  : calc( (100%/4) - ((3*36px)/4) )
+	overflow   : hidden
+	width      : 100%
+
+	/* Elementos finales y cuartos elementos */
+	&:last-child , &:nth-child(4)
+		margin-right: 0
+	
+	//Imágen
+	figure.featured-image
+		background-size: cover 
+		height         : 130px
+		margin         : 0 auto 9px
+		max-width      : 174px
+		overflow       : hidden 
+		width          : 100%
+		//Link to tour
+		a 
+			bottom  : 0
+			position: absolute
+	
+	//Titulo
+	h2
+		font-size  : 20px
+		font-weight: 600
+		margin     : 0
+	//Span
+	span.text-excerpt
+		font-size : 15px
+
+/*
+ * CONTENIDO TEXTO DETALLE DE TOUR
+ */
+
+#text-content-tour
+	height  : 550px
+	overflow: auto 
+
+.contentSingleTour
+	font-family : "GothamBook", sans-serif
+
+	/* Títulos */
+	h2 , h3 , h4 , h5 , h6
+		color    : #008A00
+		font-size: 20px 
+
+	/* Imágen Destacada */
+	.featured-image
+		background-size: cover 
+		float          : left 
+		height         : 135px 
+		margin         : 0 12px 20px 0
+		max-width      : calc( (100%/2) - (12px/2) )
+		width          : 100%
+
+		//Elemento interno
+		a 
+			height: 100%
+
+		//Segundos y últimos elementos
+		&:nth-child(2n) , &:last-child
+			margin-right: 0
+

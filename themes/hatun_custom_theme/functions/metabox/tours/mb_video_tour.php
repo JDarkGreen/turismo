@@ -1,60 +1,53 @@
 <?php  
 /**
 ** Metabox que agregar un campo personalizado para todos 
-** los productos muestra el precio
+** los tours que tengan un video
 **/
 
 /*|-------------------------------------------------------------------------|*/
-/*|----------------- METABOX DE PRECIO --------------------|*/
+/*|-------------- METABOX DE VIDEOS --------------------|*/
 /*|-------------------------------------------------------------------------|*/
 
-add_action( 'add_meta_boxes', 'cd_mb_price_product' );
+add_action( 'add_meta_boxes', 'cd_mb_video_tour' );
 
 //llamar funcion 
-function cd_mb_price_product()
+function cd_mb_video_tour()
 {   
-    $array_custom_types = array('theme-products');
+    $array_custom_types = array('theme-tours');
 
     //Solo en productos
-    add_meta_box( 'mb-price-product', 'Precio de Producto', 'cd_mb_price_product_cb', $array_custom_types , 'side', 'high' );
+    add_meta_box( 'mb-video-tours', 'Video Link Tour', 'cd_mb_video_tour_cb', $array_custom_types , 'normal', 'high' );
 }
 
 //customizar box
-function cd_mb_price_product_cb( $post )
+function cd_mb_video_tour_cb( $post )
 {
     // $post is already set, and contains an object: the WordPress post
     global $post;
 
     $values = get_post_custom( $post->ID );
 
-    $prices = isset( $values['product_price'] ) ? $values['product_price'][0] : '';
-    $prices = unserialize( $prices );
-
-    #var_dump($prices);
+    $link_video = isset( $values['link_video_tour'] ) ? $values['link_video_tour'][0] : '';
 
     // We'll use this nonce field later on when saving.
     wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
 
 
     ?>
-        <label for="product_price[normal]"> Precio Normal </label> <br />
+        <label for="link_video_tour"> Link de Video: </label> <br />
 
-        <input name="product_price[normal]" value="<?= isset($prices['normal']) && !empty($prices['normal']) ? $prices['normal'] : '' ?>" /> <br /><br />
+        <input type="text" name="link_video_tour" value="<?= isset($link_video) && !empty($link_video) ? $link_video : '' ?>" size="80" /> 
 
         <!-- ********************************************************** -->
-
-        <label for="product_price[offer]" style="color: red;"> Precio Oferta !! </label> <br />
-
-        <input name="product_price[offer]" value="<?= isset($prices['offer']) && !empty($prices['offer']) ? $prices['offer'] : '' ?>" /> <br />
 
     <?php    
 }
 
 
 //guardar la data
-add_action( 'save_post', 'cd_mb_price_products_save' );
+add_action( 'save_post', 'cd_mb_qualify_products_save' );
 
-function cd_mb_price_products_save( $post_id )
+function cd_mb_qualify_products_save( $post_id )
 {
     // Bail if we're doing an auto save
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
@@ -71,10 +64,10 @@ function cd_mb_price_products_save( $post_id )
             'href' => array() // and those anchors can only have href attribute
         )
     );
-     
+        
     // Make sure your data is set before trying to save it
-    if( isset( $_POST['product_price'] ) )
-        update_post_meta( $post_id, 'product_price', $_POST['product_price'] );
+    if( isset( $_POST['link_video_tour'] ) )
+        update_post_meta( $post_id, 'link_video_tour', $_POST['link_video_tour'] );
 }
 
 

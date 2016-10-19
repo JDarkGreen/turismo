@@ -34,25 +34,17 @@ include('metabox/promotions/mb_duration_travel.php');
   */
 include('metabox/promotions/mb_price_travel.php');
 
-/******************************************************************/
-/**- SERVICIOS **/
-/******************************************************************/
-
-/**[ INCLUIR METABOX DE MULTIPLES DATOS ]**/
-/*include("metabox/services/mb_service_cortes.php");
-include("metabox/services/mb_service_color.php");
-include("metabox/services/mb_service_care.php");
-include("metabox/services/mb_service_lisos.php");
-include("metabox/services/mb_service_makeup.php");*/
 
 /******************************************************************/
-/**- PRODUCTOS **/
+/**- TOURS **/
 /******************************************************************/
 
-/*Metabox de Precio
-include('metabox/products/mb_price_product.php' );
-/*Metabox de Calificación
-include('metabox/products/mb_qualify_product.php' );*/
+/*
+ * Metabox de Video
+ */
+if( stream_resolve_include_path('metabox/tours/mb_video_tour.php') ):
+	include('metabox/tours/mb_video_tour.php' );
+endif;
 
 
 
