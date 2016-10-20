@@ -45,6 +45,12 @@ include('metabox/promotions/mb_price_travel.php');
 if( stream_resolve_include_path('metabox/tours/mb_video_tour.php') ):
 	include('metabox/tours/mb_video_tour.php' );
 endif;
+/*
+ * Metabox de Geolocalización
+ */
+if( stream_resolve_include_path('metabox/tours/mb_geocoder.php') ):
+	include('metabox/tours/mb_geocoder.php' );
+endif;
 
 
 

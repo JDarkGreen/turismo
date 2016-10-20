@@ -39,6 +39,8 @@ function load_custom_scripts()
 	/** [Cargar ScrollReveal] **/
 	wp_enqueue_script('wp-scrollreveal-js', THEMEROOT . '/assets/js/vendor/scrollreveal/scrollreveal.min.js', array('jquery'), '' , true );	
 
+	//custom script para videos de youtube
+	wp_enqueue_script('custom_lazy_youtube', THEMEROOT . '/assets/js/source/youtube-lazy-load.js', array('jquery'), '1.0' , true );
 
 	//custom script
 	wp_enqueue_script('custom_script', THEMEROOT . '/assets/js/source/script.js', array('jquery'), '1.0' , true );
