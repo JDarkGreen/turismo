@@ -69,32 +69,68 @@ include( locate_template('partials/main-menu-navigation.php') );
 						<?= apply_filters( 'the_content' , __( $post->post_content , LANG ) ); ?>
 					</div> <!-- /.content-welcome -->
 
-					<!-- Espacio  --> <br /><br /><br />
-
-					<!-- Contenedor y Formulario de Reserva -->
-					<section>
-						
-						<!-- Título -->
-						<h2 class="titleCommon__section text-xs-left">
-							<span> <?= __( 'Reservación :' , LANG ); ?></span>
-						</h2>
-
-						<!-- Formulario Reserva -->
-						<form id="form-reservation" class="formularyCommon" action="" method="POST">
-
-							<!-- Nombres y apellidos -->
-							<label for="input_name"></label>
-							<input type="text" id="input_name" name="input_name" placeholder="<?php _e( 'Nombre y Apellidos:', LANG ); ?>" required />
-
-							<!-- Nombres y apellidos -->
-							<label for="input_phone"></label>
-							<input type="text" id="input_name" name="input_name" placeholder="<?php _e( 'Nombre y Apellidos:', LANG ); ?>" required />
-							
-						</form> <!-- /#form-reservation -->
-
-					</section> <!-- /section. -->
-				
 				</div> <!-- /.text-xs-center -->
+
+				<!-- Espacio  --> <br /><br /><br />
+
+				<!-- Contenedor y Formulario de Reserva -->
+				<section>
+					
+					<!-- Título -->
+					<h2 class="titleCommon__section text-xs-left">
+						<span> <?= __( 'Reservación :' , LANG ); ?></span>
+					</h2>
+
+					<!-- Formulario Reserva -->
+					<form id="form-reservation" class="formularyCommon" action="" method="POST">
+
+						<!-- Nombres y apellidos -->
+						<label for="input_name"> <?php _e( 'Nombre y Apellidos:', LANG ); ?> </label>
+						<input type="text" id="input_name" name="input_name" placeholder="" required />
+
+						<!-- Teléfono -->
+						<label for="input_phone"> <?php _e( 'Teléfono:', LANG ); ?> 
+						</label>
+						<input type="text" id="input_name" name="input_name" placeholder="" required />
+
+						<!-- País -->
+						<label for="input_country"> <?php _e( 'País:', LANG ); ?> 
+						</label>
+						<input type="text" id="input_country" name="input_country" placeholder="" required />
+
+						<!-- Correo Electrónico -->
+						<label for="input_email"> 
+						<?php _e( 'Correo Electrónico:', LANG ); ?> 
+						</label>
+						<input type="text" id="input_email" name="input_email" placeholder="" required />
+
+						<!-- Destino -->
+						<label for="input_destination"> 
+						<?php _e( 'Destino:', LANG ); ?> 
+						</label>
+						<input type="text" id="input_destination" name="input_destination" placeholder="" required />
+
+						<!-- Promoción -->
+						<label for="input_promotion"> 
+						<?php _e( 'Promoción:', LANG ); ?> 
+						</label>
+						<input type="text" id="input_promotion" name="input_promotion" placeholder="" required />
+
+						<!-- Fecha de Salida -->
+						<label for="input_date_star"> 
+						<?php _e( 'Fecha de Salida:', LANG ); ?> 
+						</label>
+						<input type="text" id="input_date_star" class="date-picker" name="input_date_star" placeholder="" required />
+
+						<!-- Fecha de Regreso -->
+						<label for="input_date_end"> 
+						<?php _e( 'Fecha de Regreso:', LANG ); ?> 
+						</label>
+						<input type="text" id="input_date_end" class="date-picker" name="input_date_end" placeholder="" required />
+						
+					</form> <!-- /#form-reservation -->
+
+				</section> <!-- /section. -->
 
 				<!-- Espacios --> <br /><br />
 

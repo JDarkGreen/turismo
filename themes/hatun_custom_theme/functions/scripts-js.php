@@ -36,6 +36,17 @@ function load_custom_scripts()
 	/** [Cargar SlideBar] **/
 	//wp_enqueue_script('wp-slidebar-js', THEMEROOT . '/assets/js/vendor/slidebars.min.js', array('jquery'), '2.0.2', true);
 
+	/** [Cargar DatePicker] **/
+
+    wp_deregister_script( 'jquery-ui-core' );
+    wp_enqueue_script('jquery-ui-core', 'http://code.jquery.com/ui/1.12.1/jquery-ui.js', array('jquery'), '1.12.1', true);
+
+    wp_enqueue_script('jquery-ui-datepicker');
+
+
+    wp_register_style( 'jquery-ui', 'http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css' );
+    wp_enqueue_style( 'jquery-ui' ); 
+
 	/** [Cargar ScrollReveal] **/
 	wp_enqueue_script('wp-scrollreveal-js', THEMEROOT . '/assets/js/vendor/scrollreveal/scrollreveal.min.js', array('jquery'), '' , true );	
 

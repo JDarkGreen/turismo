@@ -31,6 +31,15 @@ function getWidthBrowser()
 
 		});
 
+		/*|-----------------------------------|*/
+		/*|-----  CARGAR DATEPICKER  -----|*/
+		/*|------------------------------------|*/		
+
+		j('.date-picker').datepicker({
+			'dateFormat'     : 'dd-mm-yy',
+			'showButtonPanel': true,
+			'showAnim'       : 'slide'
+    	});
 
 		/*|----------------------------------------------------------------------|*/
 		/*|-----  CAROUSEL HOME  LIBRERIA OWL CAROUSEL -----|*/
