@@ -52,10 +52,18 @@ require('admin/assets/custom-styles.php');
 //javascript
 require('admin/assets/custom-scripts.php');
 
-/*-----------------
+/*----------------------------------------
 * Opciones del tema
-*------------------*/
+*----------------------------------------*/
 include('admin/theme-customizer-modal.php');
+
+/*--------------------------------------
+* Páginas - Menús Customizadas del tema
+*--------------------------------------*/
+
+if ( stream_resolve_include_path('functions/register-more-pages-admin.php') ) :
+  include('functions/register-more-pages-admin.php');
+endif;
 
 
 
