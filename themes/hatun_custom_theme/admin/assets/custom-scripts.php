@@ -46,6 +46,11 @@ function load_admin_custom_enqueue() {
 	/**
 	* JS DE SUBIR GALERIA DE IMAGENES 
 	**/
+
+	//Versión 2 de Galería
+	wp_enqueue_script('wp-master-upload-gallery', THEMEROOT . '/admin/assets/js/upload-master-gallery.js', array('jquery'), '1.2' , true);
+
+
 	wp_enqueue_script('wp-js-upload-gallery', THEMEROOT . '/admin/assets/js/upload-container-gallery.js', array('jquery' ), '', true);
 	//Imágen Simple
 	wp_enqueue_script('wp-js-upload-single-image', THEMEROOT . '/admin/assets/js/upload-single-image.js', array('jquery' ), '', true);

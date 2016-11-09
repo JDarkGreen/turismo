@@ -1,6 +1,6 @@
 # WordPress MySQL database migration
 #
-# Generated: Wednesday 19. October 2016 23:02 UTC
+# Generated: Wednesday 9. November 2016 23:47 UTC
 # Hostname: localhost
 # Database: `turismo`
 # --------------------------------------------------------
@@ -149,7 +149,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=418 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=560 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -260,7 +260,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:5:{i:1476949621;a:1:{s:36:"check_plugin_updates-wp-media-folder";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1476957798;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1476992710;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1477001087;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:5:{i:1478764021;a:1:{s:36:"check_plugin_updates-wp-media-folder";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1478772198;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1478807110;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1478815487;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (118, 'can_compress_scripts', '1', 'no'),
 (136, 'recently_activated', 'a:1:{s:26:"ag-custom-admin/plugin.php";i:1475186842;}', 'yes'),
 (142, 'theme_mods_twentysixteen', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1475187444;s:4:"data";a:2:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}}}}', 'yes'),
@@ -276,7 +276,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (158, 'qtranslate_front_config', 'a:1:{s:9:"all-pages";a:1:{s:7:"filters";a:3:{s:4:"text";a:11:{s:12:"widget_title";s:2:"20";s:11:"widget_text";s:2:"20";s:9:"the_title";s:2:"20";s:20:"category_description";s:2:"20";s:9:"list_cats";s:2:"20";s:16:"wp_dropdown_cats";s:2:"20";s:9:"term_name";s:2:"20";s:18:"get_comment_author";s:2:"20";s:10:"the_author";s:2:"20";s:9:"tml_title";s:2:"20";s:16:"term_description";s:2:"20";}s:4:"term";a:10:{s:7:"cat_row";s:1:"0";s:8:"cat_rows";s:1:"0";s:19:"wp_get_object_terms";s:1:"0";s:16:"single_cat_title";s:1:"0";s:16:"single_tag_title";s:1:"0";s:17:"single_term_title";s:1:"0";s:12:"the_category";s:1:"0";s:8:"get_term";s:1:"0";s:9:"get_terms";s:1:"0";s:12:"get_category";s:1:"0";}s:3:"url";a:16:{s:16:"author_feed_link";s:2:"10";s:11:"author_link";s:2:"10";s:27:"get_comment_author_url_link";s:2:"10";s:23:"post_comments_feed_link";s:2:"10";s:8:"day_link";s:2:"10";s:10:"month_link";s:2:"10";s:9:"year_link";s:2:"10";s:9:"page_link";s:2:"10";s:9:"post_link";s:2:"10";s:13:"category_link";s:2:"10";s:18:"category_feed_link";s:2:"10";s:8:"tag_link";s:2:"10";s:9:"term_link";s:2:"10";s:13:"the_permalink";s:2:"10";s:9:"feed_link";s:2:"10";s:13:"tag_feed_link";s:2:"10";}}}}', 'yes'),
 (159, 'widget_qtranslate', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (160, 'qtranslate_next_thanks', '1487545053', 'yes'),
-(161, 'qtranslate_next_update_mo', '1477497537', 'yes'),
+(161, 'qtranslate_next_update_mo', '1479330527', 'yes'),
 (184, 'duplicate_post_copyexcerpt', '1', 'yes'),
 (185, 'duplicate_post_copyattachments', '0', 'yes'),
 (186, 'duplicate_post_copychildren', '0', 'yes'),
@@ -310,7 +310,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (217, 'wpmf_weight_selected', '[["0-61440","kB"],["61440-122880","kB"],["122880-184320","kB"],["184320-245760","kB"],["245760-307200","kB"]]', 'yes'),
 (218, 'wpmf_color_singlefile', '{"bgdownloadlink":"#444444","hvdownloadlink":"#888888","fontdownloadlink":"#ffffff","hoverfontcolor":"#ffffff"}', 'yes'),
 (219, 'wpmf_option_singlefile', '0', 'yes'),
-(220, 'external_updates-wp-media-folder', 'O:8:"stdClass":3:{s:9:"lastCheck";i:1476892741;s:14:"checkedVersion";s:5:"3.3.3";s:6:"update";O:8:"stdClass":7:{s:2:"id";i:0;s:4:"slug";s:15:"wp-media-folder";s:7:"version";s:5:"3.8.3";s:8:"homepage";s:61:"https://www.joomunited.com/wordpress-products/wp-media-folder";s:12:"download_url";s:120:"https://www.joomunited.com/index.php?option=com_juupdater&task=download.download&extension=wp-media-folder&version=3.8.3";s:14:"upgrade_notice";s:29:"Upgrade to the latest version";s:8:"filename";s:35:"wp-media-folder/wp-media-folder.php";}}', 'no'),
+(220, 'external_updates-wp-media-folder', 'O:8:"stdClass":3:{s:9:"lastCheck";i:1478725730;s:14:"checkedVersion";s:5:"3.3.3";s:6:"update";O:8:"stdClass":7:{s:2:"id";i:0;s:4:"slug";s:15:"wp-media-folder";s:7:"version";s:5:"3.8.5";s:8:"homepage";s:61:"https://www.joomunited.com/wordpress-products/wp-media-folder";s:12:"download_url";s:120:"https://www.joomunited.com/index.php?option=com_juupdater&task=download.download&extension=wp-media-folder&version=3.8.5";s:14:"upgrade_notice";s:29:"Upgrade to the latest version";s:8:"filename";s:35:"wp-media-folder/wp-media-folder.php";}}', 'no'),
 (223, '_wpmf_import_notice_flag', 'yes', 'yes'),
 (264, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes'),
 (265, 'qtranslate_term_name', 'a:3:{s:5:"Costa";a:2:{s:2:"es";s:5:"Costa";s:2:"en";s:0:"";}s:6:"Sierra";a:2:{s:2:"es";s:6:"Sierra";s:2:"en";s:6:"Sierra";}s:5:"Selva";a:2:{s:2:"es";s:5:"Selva";s:2:"en";s:2:"Se";}}', 'yes'),
@@ -344,14 +344,13 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=253 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=254 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
 # Data contents of table `wp_postmeta`
 #
 INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
-(1, 2, '_wp_page_template', 'default'),
 (4, 1, '_edit_lock', '1475195493:1'),
 (5, 4, '_edit_last', '1'),
 (6, 4, 'mb_image_gallery', ''),
@@ -374,9 +373,6 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (23, 7, '_edit_lock', '1475269079:1'),
 (24, 7, '_thumbnail_id', '5'),
 (26, 7, '_dp_original', '6'),
-(27, 2, '_wp_trash_meta_status', 'publish'),
-(28, 2, '_wp_trash_meta_time', '1475509272'),
-(29, 2, '_wp_desired_post_slug', 'pagina-de-ejemplo'),
 (30, 9, '_edit_last', '1'),
 (31, 9, '_wp_page_template', 'default'),
 (32, 9, 'mb_featured_banner', 'http://localhost/turismo/wp-content/uploads/2016/10/sample-banner.jpg'),
@@ -398,10 +394,10 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (48, 15, 'mb_image_gallery', ''),
 (49, 15, '_edit_lock', '1476224773:1'),
 (50, 17, '_edit_last', '1'),
-(51, 17, '_wp_page_template', 'default'),
+(51, 17, '_wp_page_template', 'page-reservas.php'),
 (52, 17, 'mb_featured_banner', ''),
 (53, 17, 'mb_image_gallery', ''),
-(54, 17, '_edit_lock', '1475509189:1'),
+(54, 17, '_edit_lock', '1477088920:1'),
 (55, 19, '_edit_last', '1'),
 (56, 19, '_wp_page_template', 'default'),
 (57, 19, 'mb_featured_banner', ''),
@@ -450,12 +446,12 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (103, 27, '_menu_item_object_id', '13'),
 (104, 27, '_menu_item_object', 'page'),
 (105, 27, '_menu_item_target', ''),
-(106, 27, '_menu_item_classes', 'a:1:{i:0;s:0:"";}') ;
-INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(106, 27, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (107, 27, '_menu_item_xfn', ''),
 (108, 27, '_menu_item_url', ''),
 (110, 28, '_menu_item_type', 'post_type'),
-(111, 28, '_menu_item_menu_item_parent', '0'),
+(111, 28, '_menu_item_menu_item_parent', '0') ;
+INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (112, 28, '_menu_item_object_id', '11'),
 (113, 28, '_menu_item_object', 'page'),
 (114, 28, '_menu_item_target', ''),
@@ -491,7 +487,7 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (148, 32, '_edit_lock', '1475518381:1'),
 (149, 33, '_edit_last', '1'),
 (150, 33, 'mb_image_gallery', ',62,62,62,62,62'),
-(151, 33, '_edit_lock', '1476917999:1'),
+(151, 33, '_edit_lock', '1477004843:1'),
 (152, 36, '_wp_attached_file', '2016/10/widget_image.jpg'),
 (153, 36, 'wpmf_size', '17822'),
 (154, 36, 'wpmf_filetype', 'jpg'),
@@ -551,12 +547,12 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (216, 47, '_dp_original', '32'),
 (217, 48, '_edit_last', '1'),
 (218, 48, 'mb_image_gallery', ''),
-(219, 48, '_edit_lock', '1475604911:1') ;
-INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(219, 48, '_edit_lock', '1475604911:1'),
 (221, 48, '_dp_original', '47'),
 (222, 49, '_edit_last', '1'),
 (223, 49, 'mb_image_gallery', ''),
-(224, 49, '_edit_lock', '1475604919:1'),
+(224, 49, '_edit_lock', '1475604919:1') ;
+INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (226, 49, '_dp_original', '48'),
 (227, 50, '_edit_last', '1'),
 (228, 50, 'mb_image_gallery', ''),
@@ -581,7 +577,8 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (249, 62, 'wpmf_size', '35079'),
 (250, 62, 'wpmf_filetype', 'jpg'),
 (251, 62, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:400;s:6:"height";i:295;s:4:"file";s:26:"2016/10/sample-gallery.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"sample-gallery-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:26:"sample-gallery-300x221.jpg";s:5:"width";i:300;s:6:"height";i:221;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:26:"sample-gallery-210x210.jpg";s:5:"width";i:210;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(252, 33, 'link_video_tour', 'https://www.youtube.com/watch?v=MfxlY7H00EE') ;
+(252, 33, 'link_video_tour', 'https://www.youtube.com/watch?v=MfxlY7H00EE'),
+(253, 33, 'mb_geocoder_item', '-12.14008941952883,-76.97970076779785') ;
 
 #
 # End of data contents of table `wp_postmeta`
@@ -629,7 +626,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -637,12 +634,10 @@ CREATE TABLE `wp_posts` (
 #
 INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (1, 1, '2016-09-29 22:03:14', '2016-09-29 22:03:14', 'Bienvenido a WordPress. Esta es su primera entrada. Edítela o bórrela, y ¡empiece a escribir!', '¡Hola mundo!', '', 'publish', 'open', 'open', '', 'hola-mundo', '', '', '2016-09-29 22:03:14', '2016-09-29 22:03:14', '', 0, 'http://localhost/turismo/?p=1', 0, 'post', '', 1),
-(2, 1, '2016-09-29 22:03:14', '2016-09-29 22:03:14', 'Esto es una página de ejemplo. Es diferente a una entrada del blog, ya que permanecerá fija en un lugar y se mostrará en la navegación de su sitio (en la mayoría de temas). La mayoría de personas empieza con una página Acerca de, que brinda información a los visitantes de su sitio. Se podría decir algo como esto:\n\n<blockquote>¡Hola! Durante el día soy un mensajero, un aspirante a actor por la noche, y este es mi blog. Vivo en Lima, tengo un enorme perro llamado Pocho, y me gusta el Pisco Sour. (Y caminar bajo la lluvia.)</blockquote>\n\n...o algo como esto:\n\n<blockquote>La compañía XYZ, se fundó en 1971, y ha estado desde entonces, proporcionando artilugios de calidad al público. Está situado en la ciudad de Lima, XYZ emplea a más de 2,000 personas y hace todo tipo de cosas sorprendentes para la comunidad limeña.</blockquote>\n\nComo nuevo usuario de WordPress, usted debe ir a <a href="http://localhost/turismo/wp-admin/">su panel</a> para eliminar esta página y crear nuevas para su contenido. ¡Que se divierta!', 'Página de ejemplo', '', 'trash', 'closed', 'open', '', 'pagina-de-ejemplo__trashed', '', '', '2016-10-03 15:41:12', '2016-10-03 15:41:12', '', 0, 'http://localhost/turismo/?page_id=2', 0, 'page', '', 0),
 (4, 1, '2016-09-30 19:45:45', '2016-09-30 19:45:45', '', '[:es]El Perú es Increíble[:]', '', 'publish', 'closed', 'closed', '', 'el-peru-es-increible', '', '', '2016-09-30 22:49:39', '2016-09-30 22:49:39', '', 0, 'http://localhost/turismo/?post_type=slider-home&#038;p=4', 0, 'slider-home', '', 0),
 (5, 1, '2016-09-30 19:56:00', '2016-09-30 19:56:00', '', 'sliderhome1', '', 'inherit', 'open', 'closed', '', 'sliderhome1', '', '', '2016-09-30 19:56:00', '2016-09-30 19:56:00', '', 4, 'http://localhost/turismo/wp-content/uploads/2016/09/sliderhome1.jpg', 0, 'attachment', 'image/jpeg', 0),
 (6, 1, '2016-09-30 19:56:17', '2016-09-30 19:56:17', '', '[:es]El Perú es Increíble[:]', '', 'publish', 'closed', 'closed', '', 'el-peru-es-increible-2', '', '', '2016-09-30 19:56:25', '2016-09-30 19:56:25', '', 0, 'http://localhost/turismo/?post_type=slider-home&#038;p=6', 0, 'slider-home', '', 0),
 (7, 1, '2016-09-30 19:56:29', '2016-09-30 19:56:29', '', '[:es]El Perú es Increíble[:]', '', 'publish', 'closed', 'closed', '', 'el-peru-es-increible-3', '', '', '2016-09-30 21:00:03', '2016-09-30 21:00:03', '', 0, 'http://localhost/turismo/?post_type=slider-home&#038;p=7', 0, 'slider-home', '', 0),
-(8, 1, '2016-10-03 15:41:12', '2016-10-03 15:41:12', 'Esto es una página de ejemplo. Es diferente a una entrada del blog, ya que permanecerá fija en un lugar y se mostrará en la navegación de su sitio (en la mayoría de temas). La mayoría de personas empieza con una página Acerca de, que brinda información a los visitantes de su sitio. Se podría decir algo como esto:\n\n<blockquote>¡Hola! Durante el día soy un mensajero, un aspirante a actor por la noche, y este es mi blog. Vivo en Lima, tengo un enorme perro llamado Pocho, y me gusta el Pisco Sour. (Y caminar bajo la lluvia.)</blockquote>\n\n...o algo como esto:\n\n<blockquote>La compañía XYZ, se fundó en 1971, y ha estado desde entonces, proporcionando artilugios de calidad al público. Está situado en la ciudad de Lima, XYZ emplea a más de 2,000 personas y hace todo tipo de cosas sorprendentes para la comunidad limeña.</blockquote>\n\nComo nuevo usuario de WordPress, usted debe ir a <a href="http://localhost/turismo/wp-admin/">su panel</a> para eliminar esta página y crear nuevas para su contenido. ¡Que se divierta!', 'Página de ejemplo', '', 'inherit', 'closed', 'closed', '', '2-revision-v1', '', '', '2016-10-03 15:41:12', '2016-10-03 15:41:12', '', 2, 'http://localhost/turismo/2016/10/03/2-revision-v1/', 0, 'revision', '', 0),
 (9, 1, '2016-10-03 15:41:25', '2016-10-03 15:41:25', '[:es]<h2>NUESTRO ORGULLO</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\n<h2>PERÚ, UN LUGAR  FANTÁSTICO Y MARAVILLOSO</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo[:]', '[:es]Nosotros[:]', '', 'publish', 'closed', 'closed', '', 'nosotros', '', '', '2016-10-11 18:15:15', '2016-10-11 18:15:15', '', 0, 'http://localhost/turismo/?page_id=9', 0, 'page', '', 0),
 (10, 1, '2016-10-03 15:41:25', '2016-10-03 15:41:25', '', '[:es]Nosotros[:]', '', 'inherit', 'closed', 'closed', '', '9-revision-v1', '', '', '2016-10-03 15:41:25', '2016-10-03 15:41:25', '', 9, 'http://localhost/turismo/2016/10/03/9-revision-v1/', 0, 'revision', '', 0),
 (11, 1, '2016-10-03 15:41:35', '2016-10-03 15:41:35', '[:es]Ánimese y viaje con nosotros !! La aventura espera por usted, lo esperamos con el corazón abierto y la certeza de sabe que será para ustedes un viaje gratamente memorable.certeza de sabe que será para ustedes un viaje gratamente memorable[:]', '[:es]Promociones[:]', '', 'publish', 'closed', 'closed', '', 'promociones', '', '', '2016-10-11 20:03:41', '2016-10-11 20:03:41', '', 0, 'http://localhost/turismo/?page_id=11', 0, 'page', '', 0),
@@ -651,7 +646,7 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (14, 1, '2016-10-03 15:41:45', '2016-10-03 15:41:45', '', '[:es]Planea tu viaje[:]', '', 'inherit', 'closed', 'closed', '', '13-revision-v1', '', '', '2016-10-03 15:41:45', '2016-10-03 15:41:45', '', 13, 'http://localhost/turismo/2016/10/03/13-revision-v1/', 0, 'revision', '', 0),
 (15, 1, '2016-10-03 15:41:55', '2016-10-03 15:41:55', '[:es]Ánimese y viaje con nosotros !! La aventura espera por usted, lo esperamos con el corazón abierto y la certeza de sabe que será para ustedes un viaje gratamente memorable.certeza de sabe que será para ustedes un viaje gratamente memorable[:]', '[:es]Destacados[:]', '', 'publish', 'closed', 'closed', '', 'destacados', '', '', '2016-10-11 22:00:18', '2016-10-11 22:00:18', '', 0, 'http://localhost/turismo/?page_id=15', 0, 'page', '', 0),
 (16, 1, '2016-10-03 15:41:55', '2016-10-03 15:41:55', '', '[:es]Destacados[:]', '', 'inherit', 'closed', 'closed', '', '15-revision-v1', '', '', '2016-10-03 15:41:55', '2016-10-03 15:41:55', '', 15, 'http://localhost/turismo/2016/10/03/15-revision-v1/', 0, 'revision', '', 0),
-(17, 1, '2016-10-03 15:42:06', '2016-10-03 15:42:06', '', '[:es]Reservas[:]', '', 'publish', 'closed', 'closed', '', 'reservas', '', '', '2016-10-03 15:42:06', '2016-10-03 15:42:06', '', 0, 'http://localhost/turismo/?page_id=17', 0, 'page', '', 0),
+(17, 1, '2016-10-03 15:42:06', '2016-10-03 15:42:06', '[:es]Ánimese y viaje con nosotros !! La aventura espera por usted, lo esperamos con el corazón abierto y la certeza de sabe que será para ustedes un viaje gratamente memorable.certeza de sabe que será para ustedes un viaje gratamente memorable[:]', '[:es]Reservas[:]', '', 'publish', 'closed', 'closed', '', 'reservas', '', '', '2016-10-21 20:41:38', '2016-10-21 20:41:38', '', 0, 'http://localhost/turismo/?page_id=17', 0, 'page', '', 0),
 (18, 1, '2016-10-03 15:42:06', '2016-10-03 15:42:06', '', '[:es]Reservas[:]', '', 'inherit', 'closed', 'closed', '', '17-revision-v1', '', '', '2016-10-03 15:42:06', '2016-10-03 15:42:06', '', 17, 'http://localhost/turismo/2016/10/03/17-revision-v1/', 0, 'revision', '', 0),
 (19, 1, '2016-10-03 15:42:21', '2016-10-03 15:42:21', '', '[:es]Blog[:]', '', 'publish', 'closed', 'closed', '', 'blog', '', '', '2016-10-03 15:42:21', '2016-10-03 15:42:21', '', 0, 'http://localhost/turismo/?page_id=19', 0, 'page', '', 0),
 (20, 1, '2016-10-03 15:42:21', '2016-10-03 15:42:21', '', '[:es]Blog[:]', '', 'inherit', 'closed', 'closed', '', '19-revision-v1', '', '', '2016-10-03 15:42:21', '2016-10-03 15:42:21', '', 19, 'http://localhost/turismo/2016/10/03/19-revision-v1/', 0, 'revision', '', 0),
@@ -667,7 +662,7 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (30, 1, '2016-10-03 15:44:27', '2016-10-03 15:44:27', ' ', '', '', 'publish', 'closed', 'closed', '', '30', '', '', '2016-10-03 15:44:27', '2016-10-03 15:44:27', '', 0, 'http://localhost/turismo/?p=30', 5, 'nav_menu_item', '', 0),
 (31, 1, '2016-10-03 15:44:28', '2016-10-03 15:44:28', '', 'Galería', '', 'publish', 'closed', 'closed', '', 'galeria', '', '', '2016-10-03 15:44:28', '2016-10-03 15:44:28', '', 0, 'http://localhost/turismo/?p=31', 6, 'nav_menu_item', '', 0),
 (32, 1, '2016-10-03 18:12:37', '2016-10-03 18:12:37', '', '[:es]City tour de lima[:]', '', 'publish', 'closed', 'closed', '', 'city-tour-de-lima', '', '', '2016-10-03 18:13:13', '2016-10-03 18:13:13', '', 0, 'http://localhost/turismo/?post_type=theme-tours&#038;p=32', 0, 'theme-tours', '', 0),
-(33, 1, '2016-10-03 18:12:56', '2016-10-03 18:12:56', '[:es]<h2>HISTORIA</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;\r\n<h2>DESCRIPCIÓN</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.[:]', '[:es]Iquitos[:]', '', 'publish', 'closed', 'closed', '', 'iquitos', '', '', '2016-10-19 22:29:44', '2016-10-19 22:29:44', '', 0, 'http://localhost/turismo/?post_type=theme-tours&#038;p=33', 0, 'theme-tours', '', 0),
+(33, 1, '2016-10-03 18:12:56', '2016-10-03 18:12:56', '[:es]<h2>HISTORIA</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;\r\n<h2>DESCRIPCIÓN</h2>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.[:]', '[:es]Iquitos[:]', '', 'publish', 'closed', 'closed', '', 'iquitos', '', '', '2016-10-20 22:05:40', '2016-10-20 22:05:40', '', 0, 'http://localhost/turismo/?post_type=theme-tours&#038;p=33', 0, 'theme-tours', '', 0),
 (36, 1, '2016-10-03 20:48:02', '2016-10-03 20:48:02', '', 'widget_image', '', 'inherit', 'open', 'closed', '', 'widget_image', '', '', '2016-10-03 20:48:02', '2016-10-03 20:48:02', '', 0, 'http://localhost/turismo/wp-content/uploads/2016/10/widget_image.jpg', 0, 'attachment', 'image/jpeg', 0),
 (38, 1, '2016-10-03 21:11:41', '2016-10-03 21:11:41', '', 'boton_2_agencia_viaje_turismo_lima_peru', '', 'inherit', 'open', 'closed', '', 'boton_2_agencia_viaje_turismo_lima_peru', '', '', '2016-10-03 21:11:41', '2016-10-03 21:11:41', '', 0, 'http://localhost/turismo/wp-content/uploads/2016/10/boton_2_agencia_viaje_turismo_lima_peru.jpg', 0, 'attachment', 'image/jpeg', 0),
 (40, 1, '2016-10-04 15:57:03', '2016-10-04 15:57:03', '[:es]<h2>Incluye</h2>\r\nTranslados in/out\r\n04 noches de hotel en Cusco\r\n01 Noche de Hotel en Machupicchu\r\ncity tour y ruinas aledañas\r\nMachupicchu\r\nTour Valle Sagrado\r\nTour a Salinera de Maras y Moray\r\nTodos los ingresos\r\nAsistencia Permanente\r\nItinerario.\r\n<h2>Día 01:</h2>\r\nRecojo del Aeropuerto y translado al hotel elegido. Mañana libre para aclimatarse.\r\n\r\n&nbsp;\r\n<h2>CITY TOUR:</h2>\r\nRecojo del Hotel a las 13:30 horas, programa tradicional que muestra La Catedral , exponente del arte colocnial , además el Templo del Koricancha, templo del Sol y la Luna. Visita al Parque Arqueológico de Sacsayhuaman, Centro funerario de K´engo, Tambo de Puca , Pucara y Tambomachay , conocida como los Baños del Inca, caracterizado por sus caídas de agua cristalina.\r\n\r\nRetorno a la ciudad a las 18:00 aproximadamente.\r\n\r\nAlimentación: Ninguna.[:]', '[:es]Islas Ballestas[:]', '', 'publish', 'closed', 'closed', '', 'islas-ballestas', '', '', '2016-10-11 21:42:14', '2016-10-11 21:42:14', '', 0, 'http://localhost/turismo/?post_type=theme-promotions&#038;p=40', 0, 'theme-promotions', '', 0),
@@ -690,8 +685,9 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (58, 1, '2016-10-11 18:14:30', '2016-10-11 18:14:30', '', 'sample-nosotros', '', 'inherit', 'open', 'closed', '', 'sample-nosotros', '', '', '2016-10-11 18:14:30', '2016-10-11 18:14:30', '', 9, 'http://localhost/turismo/wp-content/uploads/2016/10/sample-nosotros.jpg', 0, 'attachment', 'image/jpeg', 0),
 (59, 1, '2016-10-11 19:24:28', '2016-10-11 19:24:28', '[:es]Ánimese y viaje con nosotros !! La aventura espera por usted, lo esperamos con el corazón abierto y la certeza de sabe que será para ustedes un viaje gratamente memorable.certeza de sabe que será para ustedes un viaje gratamente memorable[:]', '[:es]Promociones[:]', '', 'inherit', 'closed', 'closed', '', '11-revision-v1', '', '', '2016-10-11 19:24:28', '2016-10-11 19:24:28', '', 11, 'http://localhost/turismo/11-revision-v1/', 0, 'revision', '', 0),
 (60, 1, '2016-10-11 22:00:18', '2016-10-11 22:00:18', '[:es]Ánimese y viaje con nosotros !! La aventura espera por usted, lo esperamos con el corazón abierto y la certeza de sabe que será para ustedes un viaje gratamente memorable.certeza de sabe que será para ustedes un viaje gratamente memorable[:]', '[:es]Destacados[:]', '', 'inherit', 'closed', 'closed', '', '15-revision-v1', '', '', '2016-10-11 22:00:18', '2016-10-11 22:00:18', '', 15, 'http://localhost/turismo/15-revision-v1/', 0, 'revision', '', 0),
-(61, 1, '2016-10-19 15:59:04', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-10-19 15:59:04', '0000-00-00 00:00:00', '', 0, 'http://localhost/turismo/?p=61', 0, 'post', '', 0),
-(62, 1, '2016-10-19 17:05:59', '2016-10-19 17:05:59', '', 'sample-gallery', '', 'inherit', 'open', 'closed', '', 'sample-gallery', '', '', '2016-10-19 17:05:59', '2016-10-19 17:05:59', '', 33, 'http://localhost/turismo/wp-content/uploads/2016/10/sample-gallery.jpg', 0, 'attachment', 'image/jpeg', 0) ;
+(62, 1, '2016-10-19 17:05:59', '2016-10-19 17:05:59', '', 'sample-gallery', '', 'inherit', 'open', 'closed', '', 'sample-gallery', '', '', '2016-10-19 17:05:59', '2016-10-19 17:05:59', '', 33, 'http://localhost/turismo/wp-content/uploads/2016/10/sample-gallery.jpg', 0, 'attachment', 'image/jpeg', 0),
+(63, 1, '2016-10-21 20:41:38', '2016-10-21 20:41:38', '[:es]Ánimese y viaje con nosotros !! La aventura espera por usted, lo esperamos con el corazón abierto y la certeza de sabe que será para ustedes un viaje gratamente memorable.certeza de sabe que será para ustedes un viaje gratamente memorable[:]', '[:es]Reservas[:]', '', 'inherit', 'closed', 'closed', '', '17-revision-v1', '', '', '2016-10-21 20:41:38', '2016-10-21 20:41:38', '', 17, 'http://localhost/turismo/17-revision-v1/', 0, 'revision', '', 0),
+(64, 1, '2016-11-09 21:08:52', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-11-09 21:08:52', '0000-00-00 00:00:00', '', 0, 'http://localhost/turismo/?p=64', 0, 'post', '', 0) ;
 
 #
 # End of data contents of table `wp_posts`
@@ -924,8 +920,8 @@ INSERT INTO `wp_usermeta` ( `umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', ''),
 (13, 1, 'show_welcome_panel', '1'),
-(15, 1, 'wp_dashboard_quick_press_last_post_id', '61'),
-(16, 1, 'session_tokens', 'a:1:{s:64:"571878953e3c7e7dabd84fb07792b0ee84b0818feaa3ee84b343a2473f82a02b";a:4:{s:10:"expiration";i:1477065535;s:2:"ip";s:3:"::1";s:2:"ua";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476892735;}}'),
+(15, 1, 'wp_dashboard_quick_press_last_post_id', '64'),
+(16, 1, 'session_tokens', 'a:1:{s:64:"2b5e3c69d7efc1a93087dd218f97ef78753b52480f1c0a3deab613d0bb6bb396";a:4:{s:10:"expiration";i:1478898526;s:2:"ip";s:3:"::1";s:2:"ua";s:101:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";s:5:"login";i:1478725726;}}'),
 (17, 1, 'wp_user-settings', 'libraryContent=browse&editor=tinymce&hidetb=1&editor_plain_text_paste_warning=1'),
 (18, 1, 'wp_user-settings-time', '1476896792'),
 (19, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";i:4;s:15:"title-attribute";}'),

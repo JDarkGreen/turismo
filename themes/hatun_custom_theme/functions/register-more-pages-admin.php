@@ -5,49 +5,50 @@
  * galerías etc.
  */
 
-
-function add_more_page_to_admin()
-{
-	
-	/*
-	 * Registrar Página de Galería
-	 */
-	add_menu_page( 'Galería de Imágenes | ' . get_bloginfo('name') , 'Galería de Imágenes' ,
-	'manage_options' , 'gallery_theme' , 'custom_theme_gallery_page' , IMAGES . '/icons/gallery.png' , 12 );
-}
-
-
 /*
  * Agregar función gracias al Hook
  */
 add_action( 'admin_menu', 'add_more_page_to_admin'); 
 
-
-/**
-* Mostrardo el renderizado final y las opciones del tema
-**/
-function custom_theme_gallery_page()
-{ ?>
-
-	<!-- Estilos -->
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-		#section-gallery{ font-family:'Ubuntu', sans-serif; }
-		#section-gallery h2.title{ font-size: 30px; font-weight: 700; color: green; }
-		#section-gallery p{ font-size: 18px; }
-
-	</style>
+/* Function callback hook */
+function add_more_page_to_admin()
+{
 	
-	<!-- Seccion -->
-	<section id="section-gallery">
+	/* Array de Elementos que tendrá la página */
+	$args_menu_pages = array();
 
-		<h2 class="title"> Bienvenido a Galería de Imágenes </h2>
+	/* Registrar Página de Galería */
+	$args_menu_pages[] = array(
+		'title_page' => 'Galería de Imágenes | ' . get_bloginfo('name'),
+		'text_menu'  => 'Galería de Imágenes',
+		'capability' => 'manage_options',
+		'menu_slug'  => 'gallery_theme',
+		'function'   => 'render_gallery_page',
+		'icon_url'   => IMAGES . '/icons/gallery.png',
+		'position'   => 12, 
+	);
 
-		<p> Esta es la galería de Imágenes Puedes Subir tus propias fotos desde aquí para que se muestren en la página de Imágenes. </p>
-		
-	</section> <!-- /section -->
+	/* Loop para registrar */
+	for ( $i = 0 ; $i < count($args_menu_pages) ; $i++) 
+	{ 
+		//Actual Ítem de Página
+		$item_page = $args_menu_pages[$i];
 
-<?php 
+		//Agregar el Menú
+		add_menu_page( $item_page['title_page'] , $item_page['text_menu'] , $item_page['capability'] , $item_page['menu_slug'] , $item_page['function'] , $item_page['icon_url'] , $item_page['position'] );
+	}
+	
 }
+
+
+/*
+ * Incluir Las Funciones Necesarias 
+ */
+
+/* Renderizado de Galería de Tema */
+$path_page_gallery = realpath( dirname(__FILE__) . '/more-page-admin/render-page-gallery.php' );
+if( $path_page_gallery )
+include( $path_page_gallery );
+
+
 
