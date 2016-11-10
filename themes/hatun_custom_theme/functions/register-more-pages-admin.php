@@ -46,7 +46,7 @@ function add_more_page_to_admin()
  */
 
 /* Renderizado de Galería de Tema */
-$path_page_gallery = realpath( dirname(__FILE__) . '/more-page-admin/render-page-gallery.php' );
+$path_page_gallery = realpath( dirname(dirname(__FILE__)) . '/admin/more-page-admin/page-gallery/render-page-gallery.php' );
 if( $path_page_gallery )
 include( $path_page_gallery );
 
